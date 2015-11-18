@@ -36,7 +36,10 @@
     font-style: normal;
 }
 /* --------------- /fonts --------------- */
-
+h3{
+    font-size: 18px;
+    font-weight: 700;
+}
 /* --------------- site --------------- */
 .site {
     min-height: 100%;
@@ -75,11 +78,34 @@
 }
 .site__footer-layout {
     width: 100%;
-
     height: 100px;
     background: blue;
 }
 /* --------------- /site --------------- */
+
+/* --------------- services --------------- */
+.services ul{
+
+}
+.services li{
+    width: 24%;
+    float: left;
+    margin-left: 10px;
+    }
+.services ul li div{
+    width: 100%;
+    height: 221px;
+    background: #ededed;
+}
+.services p{
+    font-size: 14px;
+}
+.services h3{
+
+}
+
+/* --------------- /services --------------- */
+
 
 /* --------------- logo --------------- */
 .logo {

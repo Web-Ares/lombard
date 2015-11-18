@@ -1,5 +1,14 @@
 $(function(){
+    var input = $('.calc_enter').val();
 
+
+    $('.calc_enter').on( 'input', function() {
+
+        input=0.6*$('.calc_enter').val();
+
+            $('.result').html(input);
+
+    });
 } );
 
 var Shablon = function (obj) {
@@ -8,6 +17,9 @@ var Shablon = function (obj) {
 
     this.init();
 };
+
+
+
 Shablon.prototype = {
     init: function () {
         var self = this;

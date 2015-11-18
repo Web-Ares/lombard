@@ -121,6 +121,63 @@ h3{
 
 /* --------------- /services --------------- */
 
+/* --------------- cost --------------- */
+.cost{
+    margin-top: 40px;
+}
+.cost .cost__steps span{
+    color: #fff;
+    position: relative;
+    font-size: 14px;
+    background-color: #cb0101;
+    padding: 12px 14px;
+    margin-left: 148px;
+    margin-right: 5px;
+}
+.cost .cost__steps span:first-child{
+    margin-left: 0;
+}
+.cost .cost__steps span:after{
+    content: ">>>>>";
+    color: #000;
+    font-size: 18px;
+    position: absolute;
+    left: -102px;
+}
+.cost .cost__steps span:first-child:after {
+    content: "";
+}
+.cost .cost__steps{
+    height: 27px;
+    margin-bottom: 43px;
+}
+.cost .cost__calculator{
+    text-align: center;
+}
+.cost .cost__calculator span{
+    font-size: 18px;
+    background-color: #000;
+    display: inline-block;
+    color: #ffffff;
+    width: 100%;
+    padding: 6px 0;
+    text-transform: uppercase;
+}
+.cost .cost__calculator__form{
+    background-color: #fff;
+    width: 462px;
+    margin: 0 auto;
+}
+.cost .cost__calculator__form .result{
+    background-color: transparent;
+    font-size: 36px;
+    color: #cb0101;
+    width: auto;
+}
+/* --------------- /cost --------------- */
+
+
+
 
 /* --------------- logo --------------- */
 .logo {

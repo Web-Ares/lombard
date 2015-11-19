@@ -44,7 +44,7 @@ body {
 h2{
     position: relative;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: normal;
     margin-bottom: 53px;
     overflow: hidden;
@@ -57,20 +57,20 @@ h2>span:before{
     content: "";
     position: absolute;
     width: 1000px;
-    top: 19px;
+    top: 12px;
     height: 3px;
     right: 100%;
-    margin-right: 21px;
+    margin-right: 6px;
     background: #cb0101;
 }
 h2>span:after{
     content: "";
     position: absolute;
     width: 1000px;
-    top: 19px;
+    top: 12px;
     height: 3px;
     left: 100%;
-    margin-left: 21px;
+    margin-left: 6px;
     background: #cb0101;
 }
 h3{
@@ -267,7 +267,7 @@ p{
     width: 300px;
     display: inline-block;
     margin-left: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
     vertical-align: top;
 }
 .services ul li div{
@@ -301,7 +301,7 @@ p{
     margin-left: 0;
 }
 .advantages li{
-    width: 221px;
+    width: 140px;
     display: inline-block;
     margin-left: 15px;
     margin-bottom: 50px;
@@ -309,7 +309,7 @@ p{
 }
 .advantages ul li div{
     position: relative;
-    height: 220px;
+    height: 120px;
     text-align: center;
     margin-bottom: 10px;
     overflow: hidden;
@@ -447,10 +447,21 @@ p{
 /* --------------- /social-contact --------------- */
 
 /* --------------- address --------------- */
+.address h2{
+    margin: 0 auto;
+    width: 340px;
+    margin-bottom: 53px;
+}
 .map__wrap {
+    position: relative;
+    margin: 0 auto;
     width: 100%;
     height: 400px;
 }
+.map__item{
+    display: none;
+}
+
 /* --------------- /address --------------- */
 
 /* --------------- logo --------------- */
@@ -469,6 +480,17 @@ p{
     .site__footer-item {
         width: 40%;
         padding: 10px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    h2>span:before {
+        top: 19px;
+        margin-right:21px;
+    }
+    h2>span:after {
+        top: 19px;
+        margin-left:21px;
     }
     /* --------------- /site --------------- */
 
@@ -517,6 +539,7 @@ p{
     }
     .services li{
         width: 300px;
+        margin-bottom: 60px;
     }
     /* --------------- /services --------------- */
 
@@ -527,7 +550,13 @@ p{
     .advantages li{
         width: 221px;
     }
+    .advantages ul li div {
+        height: 220px;
+    }
     /* --------------- /advantages --------------- */
+    .address h2 {
+        width: 768px;
+    }
 
     /* --------------- social-contact --------------- */
     .social-contact div{
@@ -611,6 +640,7 @@ p{
     }
     .services li {
         width:360px;
+        margin-bottom: 100px;
     }
     /* --------------- /services --------------- */
 
@@ -622,7 +652,9 @@ p{
         width: 221px;
     }
     /* --------------- /advantages --------------- */
-
+    .address h2 {
+        width: 940px;
+    }
     /* --------------- social-contact --------------- */
     .social-contact div{
         width: 1000px;

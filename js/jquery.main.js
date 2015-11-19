@@ -63,12 +63,6 @@ var Slider = function (obj) {
                     ));
                 }
             });
-
-            myMap.controls
-                .add('zoomControl', { left: 5, top: 5 })
-                .add('typeSelector')
-                .add('mapTools', { left: 35, top: 5 });
-
         }
 
         ymaps.ready(init);

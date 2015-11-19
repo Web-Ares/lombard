@@ -33,6 +33,15 @@
 body {
     font-family: 'Ubuntu', sans-serif;
 }
+h3{
+    font-size: 18px;
+    font-weight: 700;
+}
+p{
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+}
 /* --------------- site --------------- */
 
 .site {
@@ -839,7 +848,7 @@ body {
         width: 221px;
     }
     /* --------------- /advantages --------------- */
-    .address h2 {
+    .address .site__title {
         width: 940px;
     }
     /* --------------- social-contact --------------- */
@@ -907,6 +916,10 @@ body {
 
 
     /* --------------- news --------------- */
+    .news .site__title {
+        width: 940px;
+        margin: 0 auto 53px auto;
+    }
     .news{
         margin-bottom: 20px;
     }

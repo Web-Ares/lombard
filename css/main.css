@@ -92,6 +92,9 @@ p{
     position: relative;
     z-index: 2;
 }
+.site__content section{
+    width: 320px;
+}
 .site__header {
     position: relative;
 
@@ -402,6 +405,9 @@ p{
 
 @media (min-width: 768px) {
     /* --------------- site --------------- */
+    .site__content section{
+        width: 768px;
+    }
     .site__footer-item {
         width: 40%;
         padding: 10px;

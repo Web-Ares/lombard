@@ -36,4 +36,51 @@ var Slider = function (obj) {
     };
 
     _init();
+
+
+        var myMap;
+
+        function init () {
+            myMap = new ymaps.Map('map', {
+                center: $('.map__item').eq(0).attr('data-coord').split(', '),
+                zoom: 12
+            });
+
+            $.each($('.map__item'), function(i){
+                var curElem = $(this);
+
+                if (curElem.attr('data-coord')) {
+                    var coord = curElem.attr('data-coord').split(', ');
+
+                    myMap.geoObjects.add(new ymaps.Placemark(
+                        [coord[0], coord[1]],
+                        {
+                            iconContent: i+1,
+                            balloonContentBody: curElem.find('a').text(),
+                            hintContent: "Описание"
+                        }
+                    ));
+                }
+            });
+
+            myMap.controls
+                .add('zoomControl', { left: 5, top: 5 })
+                .add('typeSelector')
+                .add('mapTools', { left: 35, top: 5 });
+
+        }
+
+        ymaps.ready(init);
+
+        $('.map__item span').on({
+            'click':function(){
+                var coord = $(this).parent().attr('data-coord').split(', ');
+
+                myMap.setCenter(coord);
+
+                return false;
+            }
+        });
+
+
 };

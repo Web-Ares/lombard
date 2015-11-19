@@ -6,7 +6,7 @@ $(function(){
 
             input=0.6*$('.calc_enter').val();
             input=input.toFixed(0);
-            $('.result').html(input+'<span class="rub"> P</span>');
+            $('.result').html(input+' '+ '<span class="rub">P</span>');
             $('.placeholder').html('0');
             $(".calc_enter").attr("placeholder", "0");
     });

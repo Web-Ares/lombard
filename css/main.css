@@ -447,6 +447,10 @@ p{
     font-size: 36px;
     text-decoration: line-through;
 }
+.cost .cost__calculator__form .rub_b{
+    color: #000;
+    font-size: 18px;
+}
 /* --------------- /cost --------------- */
 
 /* --------------- social-contact --------------- */

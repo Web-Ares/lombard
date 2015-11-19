@@ -474,6 +474,10 @@ p{
 
 @media (min-width: 1024px) {
     /* --------------- site --------------- */
+
+    .site__content section{
+        width: 1024px;
+    }
     .site__footer {
         text-align: left;
     }

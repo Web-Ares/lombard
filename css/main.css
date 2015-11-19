@@ -262,9 +262,7 @@ p{
 
 /* --------------- services --------------- */
 .services{
-    width: 320px;
-    position: relative;
-    margin: 0 auto;
+
 }
 .services ul{
     display: block;
@@ -305,9 +303,7 @@ p{
 
 /* --------------- advantages --------------- */
 .advantages{
-    width: 320px;
-    position: relative;
-    margin: 0 auto;
+
 }
 .advantages ul{
     display: block;
@@ -729,6 +725,86 @@ p{
 }
 /* --------------- /news-preview --------------- */
 
+/* --------------- services-page --------------- */
+.services-page>h4{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+.services-page li{
+    position: relative;
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+.services-page li:before{
+    content: "";
+    position: absolute;
+    left: -26px;
+    width: 20px;
+    height: 20px;
+    background: #cb0101 url("../img/services-right.png") center no-repeat;
+}
+.services-page__quotes {
+    position: relative;
+    display: block;
+    margin-left: 38px;
+    line-height: 24px;
+    font-size: 17px;
+    padding-bottom: 34px;
+}
+.services-page__quotes:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -38px;
+    width: 18px;
+    height: 92px;
+    border: 3px solid #cb0101;
+    border-right:#fff;
+}
+.services-page__rectangle {
+    padding-top: 18px;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    width: 300px;
+    height: 81px;
+    background: url("../pic/service-bg1.jpg");
+    background-size: contain;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+.services-page dl dt{
+    font-size: 18px;
+    float: left;
+    font-weight: 700;
+    margin-right: 10px;
+}
+.services-page dl{
+    margin-bottom: 20px;
+}
+.services-page dl dl{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.services-page span{
+    font-size: 18px;
+    display: block;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.services-page a{
+    color:#111;
+    text-decoration: underline;
+}
+.services-page a:hover{
+    text-decoration: none;
+}
+
+
+/* --------------- /services-page --------------- */
+
 @media (min-width: 768px) {
 
     /* --------------- new-detail --------------- */
@@ -822,9 +898,6 @@ p{
     /* --------------- /slider --------------- */
 
     /* --------------- services --------------- */
-    .services {
-        width: 650px;
-    }
     .services li{
         width: 300px;
         margin-bottom: 60px;
@@ -832,9 +905,6 @@ p{
     /* --------------- /services --------------- */
 
     /* --------------- advantages --------------- */
-    .advantages {
-        width: 650px;
-    }
     .advantages li{
         width: 221px;
     }
@@ -901,6 +971,21 @@ p{
         width: 460px;
     }
     /* --------------- /news --------------- */
+
+    /* --------------- services-page --------------- */
+    .services-page__quotes{
+        margin-left: 40px;
+        padding-top: 17px;
+        line-height: 28px;
+        font-size: 24px;
+        padding-bottom: 39px;
+    }
+    .services-page__rectangle{
+        padding-top: 27px;
+        width: 574px;
+        margin-bottom: 10px;
+    }
+    /* --------------- /services-page --------------- */
 }
 
 @media (min-width: 1024px) {
@@ -960,7 +1045,7 @@ p{
 
     /* --------------- services --------------- */
     .services {
-        width: 1534px;
+        max-width: 1534px;
     }
     .services li {
         width:360px;
@@ -970,7 +1055,7 @@ p{
 
     /* --------------- /advantages --------------- */
     .site__content .advantages {
-        width: 1196px;
+        max-width: 1196px;
     }
     .advantages li{
         width: 221px;
@@ -1075,7 +1160,7 @@ p{
 @media (min-width: 1534px) {
     /* --------------- site --------------- */
     .site__content .services {
-        width: 1534px;
+        max-width: 1534px;
     }
 
     /* --------------- documents --------------- */

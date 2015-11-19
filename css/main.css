@@ -464,6 +464,8 @@ p{
     margin-left: 7px;
     margin-top: 49px;
     margin-bottom: -5px;
+    width: 307px;
+    margin: 49px auto -5px;
 }
 .breadcrumbs a{
     color: #000;

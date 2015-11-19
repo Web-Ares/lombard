@@ -33,57 +33,6 @@
 body {
     font-family: 'Ubuntu', sans-serif;
 }
-/* --------------- fonts --------------- */
-@font-face {
-    font-family: "Font Name";
-    src: url("../fonts/font.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-/* --------------- /fonts --------------- */
-h2{
-    position: relative;
-    text-align: center;
-    font-size: 20px;
-    font-weight: normal;
-    margin-bottom: 53px;
-    padding-top: 32px;
-    overflow: hidden;
-}
-h2>span{
-    position: relative;
-    line-height: 30px;
-}
-h2>span:before{
-    content: "";
-    position: absolute;
-    width: 1000px;
-    top: 12px;
-    height: 3px;
-    right: 100%;
-    margin-right: 6px;
-    background: #cb0101;
-}
-h2>span:after{
-    content: "";
-    position: absolute;
-    width: 1000px;
-    top: 12px;
-    height: 3px;
-    left: 100%;
-    margin-left: 6px;
-    background: #cb0101;
-}
-h3{
-    font-size: 18px;
-    font-weight: 700;
-}
-p{
-    font-size: 14px;
-    line-height: 18px;
-    text-align: left;
-    margin-bottom: 25px;
-}
 /* --------------- site --------------- */
 
 .site {
@@ -98,9 +47,9 @@ p{
     z-index: 2;
 }
 .site__content section{
-    width: 320px;
+    max-width: 980px;
     margin: 0 auto;
-    padding: 0 6px;
+    padding: 0 20px;
 }
 .site__header {
     position: relative;
@@ -169,6 +118,55 @@ p{
 }
 .site__footer-counter {
     display: block;
+}
+.site__title{
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 53px;
+    padding-top: 32px;
+    overflow: hidden;
+}
+.site__title span{
+    position: relative;
+    line-height: 30px;
+}
+.site__title span:before{
+    content: "";
+    position: absolute;
+    width: 1000px;
+    top: 12px;
+    height: 3px;
+    right: 100%;
+    margin-right: 6px;
+    background: #cb0101;
+}
+.site__title span:after{
+    content: "";
+    position: absolute;
+    width: 1000px;
+    top: 12px;
+    height: 3px;
+    left: 100%;
+    margin-left: 6px;
+    background: #cb0101;
+}
+.site__title_left {
+    text-align: left;
+}
+.site__title_left span:before{
+    display: none;
+}
+.site__content h3{
+    font-size: 18px;
+    font-weight: 700;
+}
+.site__content p{
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+    margin-bottom: 25px;
 }
 /* --------------- /site --------------- */
 
@@ -289,6 +287,12 @@ p{
     vertical-align: top;
 }
 /* --------------- /services --------------- */
+
+/* --------------- about --------------- */
+.about .site__title{
+   text-align: left;
+}
+/* --------------- /about --------------- */
 
 /* --------------- advantages --------------- */
 .advantages{
@@ -450,6 +454,9 @@ p{
     font-size: 36px;
     text-decoration: line-through;
 }
+.site__content .cost{
+    padding-bottom: 82px;
+}
 .cost .cost__calculator__form .rub_b{
     color: #000;
     font-size: 18px;
@@ -461,10 +468,8 @@ p{
     position: relative;
     font-size: 14px;
     color: #000;
-    margin-left: 7px;
-    margin-top: 49px;
-    margin-bottom: -5px;
-    width: 307px;
+    padding: 0 20px;
+    max-width: 980px;
     margin: 49px auto -5px;
 }
 .breadcrumbs a{
@@ -606,7 +611,6 @@ p{
 @media (min-width: 768px) {
     /* --------------- site --------------- */
     .site__content section{
-        width: 768px;
         margin-bottom: 20px;
     }
     .site__footer-item {
@@ -736,7 +740,6 @@ p{
         position: relative;
         font-size: 14px;
         color: #000;
-        width: 768px;
         margin: 32px auto 0;
     }
     /* --------------- /breadcrumbs --------------- */
@@ -751,7 +754,7 @@ p{
     /* --------------- site --------------- */
 
     .site__content section{
-        width: 940px;
+
     }
     .site__footer {
         text-align: left;
@@ -891,7 +894,6 @@ p{
         position: relative;
         font-size: 14px;
         color: #000;
-        width: 940px;
         padding: 0 7px;
         margin: 32px auto 0;
 

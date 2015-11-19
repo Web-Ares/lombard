@@ -969,7 +969,7 @@ p{
     /* --------------- /services --------------- */
 
     /* --------------- /advantages --------------- */
-    .advantages {
+    .site__content .advantages {
         width: 1196px;
     }
     .advantages li{
@@ -1070,6 +1070,13 @@ p{
         margin-left: 0;
     }
     /* --------------- /news --------------- */
+}
+
+@media (min-width: 1534px) {
+    /* --------------- site --------------- */
+    .site__content .services {
+        width: 1534px;
+    }
 
     /* --------------- documents --------------- */
     .documents table tr td{

@@ -33,14 +33,6 @@
 body {
     font-family: 'Ubuntu', sans-serif;
 }
-/* --------------- fonts --------------- */
-@font-face {
-    font-family: "Font Name";
-    src: url("../fonts/font.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-/* --------------- /fonts --------------- */
 .site__title{
     position: relative;
     text-align: center;
@@ -767,7 +759,7 @@ p{
         width: 221px;
     }
     /* --------------- /advantages --------------- */
-    .address h2 {
+    .address .site__title {
         width: 940px;
     }
     /* --------------- social-contact --------------- */
@@ -835,6 +827,10 @@ p{
 
 
     /* --------------- news --------------- */
+    .news .site__title {
+        width: 940px;
+        margin: 0 auto 53px auto;
+    }
     .news{
         margin-bottom: 20px;
     }

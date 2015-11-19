@@ -118,6 +118,7 @@
             <!-- /slider -->
 
             <section class="services">
+
                 <h2>
                     <span>Наши услуги</span>
                 </h2>
@@ -148,48 +149,52 @@
             <!-- cost -->
             <section class="cost">
 
-                <h2>
-                    <span>Оформить заявку</span>
-                </h2>
+                <!--cost__wrap-->
+                <div class="cost__wrap">
 
-                <div class="cost__steps">
-                    <div>
-                        <span>1</span> Сделайте расчет на калькуляторе
+                    <h2>
+                        <span>Оформить заявку</span>
+                    </h2>
+
+                    <div class="cost__steps">
+                        <div>
+                            <span>1</span> Сделайте расчет на калькуляторе
+                        </div>
+                        <div>
+                            <span>2</span> Оформите подписку
+                        </div>
+                        <div>
+                            <span>3</span> Получите деньги!
+                        </div>
+
                     </div>
-                    <div>
-                        <span>2</span> Оформите подписку
+
+                    <!--calculator-->
+                    <div class="cost__calculator">
+
+                        <span class="cost__calculator__title">Калькулятор</span>
+
+                        <!--cost__calculator__form-->
+                        <form class="cost__calculator__form">
+
+                            <p>Все расчеты являются ориентировочными.
+                                Точные данные узнавайте в наших ломбардах.</p>
+                            <h3>Рыночная стоимость (Р):</h3>
+
+                            <input class="calc_enter"  type="number" name="enter_number" placeholder="450 000">
+
+                            Предоставим до: <span class="result">270000 <span class="rub">P</span></span>
+
+                            <button name="submit" class="feedback-submit" type="submit">Заявка</button>
+
+                        </form>
+                        <!--/cost__calculator__form-->
+
                     </div>
-                    <div>
-                        <span>3</span> Получите деньги!
-                    </div>
+                    <!--/calculator-->
 
                 </div>
-
-                <!--calculator-->
-                <div class="cost__calculator">
-
-                    <span class="cost__calculator__title">Калькулятор</span>
-                    
-                    <!--cost__calculator__form-->
-                    <form class="cost__calculator__form">
-
-                        <p>Все расчеты являются ориентировочными.
-                            Точные данные узнавайте в наших ломбардах.</p>
-                        <h3>Рыночная стоимость (Р):</h3>
-
-                        <input class="calc_enter"  type="number" name="enter_number" placeholder="450 000">
-
-                        Предоставим до: <span class="result">270000 P</span>
-
-                        <button name="submit" class="feedback-submit" type="submit">Заявка</button>
-
-                    </form>
-                    <!--/cost__calculator__form-->
-
-                </div>
-                <!--/calculator-->
-                
-
+                <!--/cost__wrap-->
 
             </section>
             <!-- /cost -->

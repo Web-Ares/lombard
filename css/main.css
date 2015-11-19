@@ -382,7 +382,9 @@ p{
     margin: 0 auto;
     color: #cb0101;
     width: 300px;
-    margin-bottom: 10px;
+    margin-bottom: 36px;
+    padding-bottom: 15px;
+    position: relative;
 }
 .cost .cost__calculator__form .result{
     background-color: transparent;
@@ -393,6 +395,7 @@ p{
 }
 .cost .cost__steps>div{
     margin-bottom: 30px;
+    margin-left: 7px;
 }
 .cost__calculator__form p{
     text-transform: uppercase;
@@ -400,6 +403,7 @@ p{
     text-align: center;
     color: #000;
     margin-bottom: 13px;
+    padding-top: 15px;
 }
 .cost .calc_enter{
     width: 287px;
@@ -410,6 +414,7 @@ p{
     padding: 5px 16px;
     font-size: 16px;
     box-shadow: inset 3px 3px 0 0 #dfdfdf;
+    border-radius: 6px;
 }
 .cost .cost__calculator__form h3{
     margin-bottom: 20px;
@@ -422,11 +427,25 @@ p{
     font-weight: 700;
     background-color: #cb0101;
     border: none;
+    position: absolute;
+    left: 50%;
+    margin-left: -143px;
+    bottom: -44px;
 }
 .cost__calculator__form .feedback-submit:hover{
     background-color: #bf595d;
     transition: background-color .5s ease ;
     -webkit-transition: background-color .5s ease ;
+}
+.cost .cost__calculator__form .rub{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    background: none;
+    color: #cb0101;
+    width: 11px;
+    font-size: 36px;
+    text-decoration: line-through;
 }
 /* --------------- /cost --------------- */
 
@@ -566,6 +585,13 @@ p{
     /* --------------- social-contact --------------- */
 
     /* --------------- cost --------------- */
+    .site__content .cost{
+        width: 100%;
+    }
+    .site__content .cost__wrap {
+        width: 768px;
+        margin: 0 auto;
+    }
     .cost .cost__steps span:after{
         content: ">>>>>";
         color: #000;
@@ -573,8 +599,22 @@ p{
         position: absolute;
         left: -102px;
     }
-    .cost .cost__steps span:first-child:after {
+    .cost .cost__steps div:first-child span:after {
         content: "";
+    }
+    .cost .cost__steps div:first-child span {
+        margin-left: 0;
+    }
+    .cost .cost__steps>div:first-child{
+        margin-left: 0;
+    }
+    .cost .cost__steps>div{
+        display: inline-block;
+        margin-left: 110px;
+        font-size: 12px;
+    }
+    .cost .cost__calculator span{
+        margin-bottom: 18px;
     }
     /* --------------- /cost --------------- */
 }
@@ -661,4 +701,61 @@ p{
         height: 229px;
     }
     /* --------------- /social-contact --------------- */
+
+    /* --------------- cost --------------- */
+    .site__content .cost__wrap{
+        width: 940px;
+    }
+    .cost__wrap h2{
+        margin-bottom: 47px;
+    }
+    .cost .cost__steps>div{
+        font-size: 14px;
+        margin-left: 153px;
+    }
+    .cost .cost__steps span:after{
+        top: 9px;
+    }
+    .cost .cost__steps{
+        margin-bottom: 24px;
+    }
+    .cost .cost__calculator span {
+        margin-bottom: 22px;
+    }
+    .cost .cost__calculator__form{
+        width: 461px;
+        font-weight: 700;
+        font-size: 18px;
+        padding-bottom: 29px;
+        margin-bottom: 81px;
+    }
+    .cost__calculator__form p{
+        font-size: 14px;
+        padding: 28px 38px 0;
+        margin-bottom: 10px;
+        font-weight: 300;
+    }
+    .cost .calc_enter{
+        width: 410px;
+        height: 54px;
+        border: 3px solid #cb0101;
+        margin-bottom: 13px;
+
+    }
+    .cost .cost__calculator__form h3{
+        margin-bottom: 16px;
+    }
+    .cost .cost__calculator__form .result{
+        display: inline-block;
+        margin-bottom: 0;
+    }
+    .cost__calculator__form .feedback-submit{
+        width: 461px;
+        font-size: 18px;
+        margin-left: -230px;
+        bottom: -61px;
+    }
+
+    /* --------------- /cost --------------- */
+
 }

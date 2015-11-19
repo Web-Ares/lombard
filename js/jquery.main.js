@@ -4,12 +4,11 @@ $(function(){
 
     $('.calc_enter').on( 'input', function() {
 
-        input=0.6*$('.calc_enter').val();
-        input=input.toFixed(0);
-        $('.result').html(input);
-        if(input= ''){
-            $('.result').html('270000');
-        }
+            input=0.6*$('.calc_enter').val();
+            input=input.toFixed(0);
+            $('.result').html(input +' P');
+            $('.placeholder').html('0 P');
+            $(".calc_enter").attr("placeholder", "0");
     });
     $('.slider').each(function () {
         Slider($(this).find('.swiper-container'));

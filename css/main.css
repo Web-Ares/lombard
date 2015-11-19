@@ -86,7 +86,7 @@ h3{
 }
 .site__footer-item h2 {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 500;
     text-transform: uppercase;
     margin-bottom: 22px;
 }
@@ -122,10 +122,88 @@ h3{
 .site__footer-counter {
     display: block;
 }
-.site__footer-info {
+/* --------------- /site --------------- */
+
+/* --------------- slider --------------- */
+.slider {
 
 }
-/* --------------- /site --------------- */
+.slider__item {
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+}
+.slider__item > div {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+.slider__info {
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    padding: 15px 6%;
+    font-size: 12px;
+    height: 145px;
+    overflow: hidden;
+    float: right;
+    width: 70%;
+}
+.slider .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    border-radius: 0;
+    border: 2px solid #c3c3c3;
+    background: #c3c3c3;
+    opacity: 1;
+}
+.slider .swiper-pagination-bullet-active {
+    background: #fff;
+    position: relative;
+}
+.slider .swiper-pagination-bullet-active:before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    right: 0;
+    background: #cb0101;
+    width: 8px;
+    height: 8px;
+}
+.slider__title {
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 10px;
+}
+.slider__info span {
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+}
+.slider__info ul {
+
+}
+.slider__info li {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.slider__info li:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    margin-right: 5px;
+}
+.slider__info a,
+.slider__info a:visited {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 300;
+}
+/* --------------- /slider --------------- */
 
 /* --------------- services --------------- */
 .services{
@@ -160,9 +238,7 @@ h3{
 .services img{
     display: inline-block;
     vertical-align: top;
-
 }
-
 /* --------------- /services --------------- */
 
 /* --------------- cost --------------- */
@@ -220,9 +296,6 @@ h3{
 }
 /* --------------- /cost --------------- */
 
-
-
-
 /* --------------- logo --------------- */
 .logo {
     position: absolute;
@@ -238,6 +311,45 @@ h3{
         padding: 10px;
     }
     /* --------------- /site --------------- */
+
+    /* --------------- slider --------------- */
+    .slider__item {
+        height: 445px;
+    }
+    .slider__info {
+        width: 50%;
+        height: 350px;
+        padding: 72px 30px 10px 50px;
+        font-size: 18px;
+    }
+    .slider__item > div {
+        max-width: 940px;
+        margin: 0 auto;
+        position: relative;
+        padding: 44px 20px;
+    }
+    .slider__info li:before {
+        width: 10px;
+        height: 10px;
+        margin: 0 14px 0 3px;
+    }
+    .slider__info ul {
+        margin-bottom: 30px;
+    }
+    .slider__info li {
+        margin-bottom: 12px;
+    }
+    .slider__info a, .slider__info a:visited {
+        font-size: 30px;
+    }
+    .slider__title {
+        font-size: 36px;
+        margin-bottom: 24px;
+    }
+    .slider__info span {
+        margin-bottom: 24px;
+    }
+    /* --------------- /slider --------------- */
 
     /* --------------- services --------------- */
     .services li{
@@ -283,6 +395,19 @@ h3{
         left: 0;
     }
     /* --------------- /site --------------- */
+
+    /* --------------- slider --------------- */
+    .slider__info {
+        width: 343px;
+        height: 343px;
+    }
+    .slider .swiper-container-horizontal > .swiper-pagination {
+        width: 343px;
+        left: 50%;
+        margin-left: 106px;
+        bottom: 29px;
+    }
+    /* --------------- /slider --------------- */
 
     /* --------------- services --------------- */
     .services li {

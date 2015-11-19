@@ -56,8 +56,9 @@ p{
     z-index: 2;
 }
 .site__content section{
-    width: 320px;
+    max-width: 980px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 .site__header {
     position: relative;
@@ -174,6 +175,7 @@ p{
     font-size: 14px;
     line-height: 18px;
     text-align: left;
+    margin-bottom: 25px;
 }
 /* --------------- /site --------------- */
 
@@ -294,6 +296,12 @@ p{
     vertical-align: top;
 }
 /* --------------- /services --------------- */
+
+/* --------------- about --------------- */
+.about .site__title{
+   text-align: left;
+}
+/* --------------- /about --------------- */
 
 /* --------------- advantages --------------- */
 .advantages{
@@ -452,11 +460,92 @@ p{
     font-size: 36px;
     text-decoration: line-through;
 }
+.site__content .cost{
+    padding-bottom: 82px;
+}
 .cost .cost__calculator__form .rub_b{
     color: #000;
     font-size: 18px;
 }
 /* --------------- /cost --------------- */
+
+/* --------------- breadcrumbs --------------- */
+.breadcrumbs{
+    position: relative;
+    font-size: 14px;
+    color: #000;
+    padding: 0 20px;
+    max-width: 980px;
+    margin: 49px auto -5px;
+}
+.breadcrumbs a{
+    color: #000;
+}
+.breadcrumbs li{
+    display: inline-block;
+    margin-left: 19px;
+    position: relative;
+}
+.breadcrumbs li:before{
+    content: "»";
+    position: absolute;
+    font-size: 14px;
+    left: -13px;
+}
+.breadcrumbs li:first-child a{
+    text-decoration: underline;
+}
+.breadcrumbs li:first-child{
+    margin-left: 0;
+}
+.breadcrumbs li a:hover{
+    color: #e3e0db;
+    text-decoration: underline;
+}
+.breadcrumbs li:first-child:before{
+    content: "";
+}
+/* --------------- /breadcrumbs --------------- */
+
+/* --------------- documents --------------- */
+.documents{
+    position: relative;
+    display: block;
+}
+.documents-block{
+    height: 73px;
+    padding-top: 20px;
+    padding-left: 70px;
+}
+.documents table tr td{
+    display: inline-block;
+    margin-bottom: 13px;
+}
+.documents table tr td:first-child{
+    margin-left: 0;
+}
+.documents table tr{
+    margin-bottom: 15px;
+    display: block;
+}
+.documents a{
+    color: #000000;
+    text-decoration: underline;
+    font-size: 18px;
+}
+.documents-pdf{
+    background: url('../img/pdf_image.png') no-repeat left;
+}
+.documents-zip{
+    background: url('../img/zip_image.png') no-repeat left;
+}
+.documents-jpg{
+    background: url('../img/jpg_image.png') no-repeat left;
+}
+.documents-xls{
+    background: url('../img/xml_image.png') no-repeat left;
+}
+/* --------------- /documents --------------- */
 
 /* --------------- news --------------- */
 .site__content .news{
@@ -566,6 +655,36 @@ p{
 }
 /* --------------- /logo --------------- */
 
+/* --------------- new-detail --------------- */
+.new-detail {
+    font-size: 14px;
+    max-width: 980px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.new-detail__pic {
+    margin-bottom: 19px;
+}
+.new-detail__pic img {
+    display: block;
+    max-width: 100%;
+}
+.new-detail ol {
+    counter-reset: list 0;
+    margin-bottom: 25px;
+}
+.new-detail ol > li {
+    line-height: 18px;
+}
+.new-detail ol > li:before {
+    counter-increment: list;
+    content: counter(list) ". ";
+}
+.new-detail p {
+    margin-bottom: 19px;
+}
+/* --------------- /new-detail --------------- */
+
 /* --------------- news-preview --------------- */
 .news-preview {
     max-width: 980px;
@@ -608,17 +727,18 @@ p{
     display: block;
     margin-bottom: 10px;
 }
-.news-preview p {
-
-}
 /* --------------- /news-preview --------------- */
 
 @media (min-width: 768px) {
 
-    /* --------------- news-preview --------------- */
-    .news-preview {
-
+    /* --------------- new-detail --------------- */
+    .new-detail__pic_left {
+        float: left;
+        margin: 5px 17px 10px 0;
     }
+    /* --------------- /new-detail --------------- */
+
+    /* --------------- news-preview --------------- */
     .news-preview__item {
         text-align: left;
     }
@@ -643,7 +763,6 @@ p{
 
     /* --------------- site --------------- */
     .site__content section{
-        width: 768px;
         margin-bottom: 20px;
     }
     .site__footer-item {
@@ -779,7 +898,7 @@ p{
     /* --------------- site --------------- */
 
     .site__content section{
-        width: 940px;
+
     }
     .site__footer {
         text-align: left;
@@ -831,6 +950,9 @@ p{
     /* --------------- /slider --------------- */
 
     /* --------------- services --------------- */
+    .services {
+        width: 1534px;
+    }
     .services li {
         width:360px;
         margin-bottom: 100px;
@@ -908,7 +1030,21 @@ p{
         margin-left: -230px;
         bottom: -61px;
     }
+
     /* --------------- /cost --------------- */
+
+    /* --------------- breadcrumbs --------------- */
+    .breadcrumbs {
+        position: relative;
+        font-size: 14px;
+        color: #000;
+        padding: 0 20px;
+        margin: 32px auto 0;
+
+    }
+    /* --------------- /breadcrumbs --------------- */
+
+
 
     /* --------------- news --------------- */
     .news .site__title {
@@ -932,4 +1068,14 @@ p{
     .site__content .services {
         width: 1534px;
     }
+
+    /* --------------- documents --------------- */
+    .documents table tr td{
+        margin-bottom: 0;
+        margin-left: 111px;
+    }
+    .documents-block{
+        padding-top: 29px;
+    }
+    /* --------------- /documents --------------- */
 }

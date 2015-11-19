@@ -831,9 +831,6 @@ p{
     /* --------------- /slider --------------- */
 
     /* --------------- services --------------- */
-    .services {
-        width: 1534px;
-    }
     .services li {
         width:360px;
         margin-bottom: 100px;
@@ -841,7 +838,7 @@ p{
     /* --------------- /services --------------- */
 
     /* --------------- /advantages --------------- */
-    .advantages {
+    .site__content .advantages {
         width: 1196px;
     }
     .advantages li{
@@ -911,9 +908,7 @@ p{
         margin-left: -230px;
         bottom: -61px;
     }
-
     /* --------------- /cost --------------- */
-
 
     /* --------------- news --------------- */
     .news .site__title {
@@ -930,4 +925,11 @@ p{
         margin-left: 0;
     }
     /* --------------- /news --------------- */
+}
+
+@media (min-width: 1534px) {
+    /* --------------- site --------------- */
+    .site__content .services {
+        width: 1534px;
+    }
 }

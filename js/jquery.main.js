@@ -5,9 +5,11 @@ $(function(){
     $('.calc_enter').on( 'input', function() {
 
         input=0.6*$('.calc_enter').val();
-
-            $('.result').html(input);
-
+        input=input.toFixed(0);
+        $('.result').html(input);
+        if(input= ''){
+            $('.result').html('270000');
+        }
     });
     $('.slider').each(function () {
         Slider($(this).find('.swiper-container'));

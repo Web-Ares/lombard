@@ -82,6 +82,7 @@ p{
     font-size: 14px;
     line-height: 18px;
     text-align: left;
+    margin-bottom: 25px;
 }
 /* --------------- site --------------- */
 
@@ -99,6 +100,7 @@ p{
 .site__content section{
     width: 320px;
     margin: 0 auto;
+    padding: 0 6px;
 }
 .site__header {
     position: relative;
@@ -454,6 +456,44 @@ p{
 }
 /* --------------- /cost --------------- */
 
+/* --------------- breadcrumbs --------------- */
+.breadcrumbs{
+    position: relative;
+    font-size: 14px;
+    color: #000;
+    margin-left: 7px;
+    margin-top: 49px;
+    margin-bottom: -5px;
+}
+.breadcrumbs a{
+    color: #000;
+}
+.breadcrumbs li{
+    display: inline-block;
+    margin-left: 19px;
+    position: relative;
+}
+.breadcrumbs li:before{
+    content: "»";
+    position: absolute;
+    font-size: 14px;
+    left: -13px;
+}
+.breadcrumbs li:first-child a{
+    text-decoration: underline;
+}
+.breadcrumbs li:first-child{
+    margin-left: 0;
+}
+.breadcrumbs li a:hover{
+    color: #e3e0db;
+    text-decoration: underline;
+}
+.breadcrumbs li:first-child:before{
+    content: "";
+}
+/* --------------- /breadcrumbs --------------- */
+
 /* --------------- news --------------- */
 .news{
     position: relative;
@@ -688,6 +728,16 @@ p{
         margin-bottom: 18px;
     }
     /* --------------- /cost --------------- */
+
+    /* --------------- breadcrumbs --------------- */
+    .breadcrumbs {
+        position: relative;
+        font-size: 14px;
+        color: #000;
+        width: 768px;
+        margin: 32px auto 0;
+    }
+    /* --------------- /breadcrumbs --------------- */
     
     /* --------------- news --------------- */
     .news>div{
@@ -833,6 +883,19 @@ p{
     }
 
     /* --------------- /cost --------------- */
+
+    /* --------------- breadcrumbs --------------- */
+    .breadcrumbs {
+        position: relative;
+        font-size: 14px;
+        color: #000;
+        width: 940px;
+        padding: 0 7px;
+        margin: 32px auto 0;
+
+    }
+    /* --------------- /breadcrumbs --------------- */
+
     /* --------------- news --------------- */
     .news{
         margin-bottom: 20px;

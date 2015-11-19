@@ -644,9 +644,6 @@ p{
     display: block;
     margin-bottom: 10px;
 }
-.news-preview p {
-
-}
 /* --------------- /news-preview --------------- */
 
 @media (min-width: 768px) {

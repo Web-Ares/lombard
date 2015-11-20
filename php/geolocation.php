@@ -3,7 +3,12 @@ $lat = $_GET['lat'];
 $lng = $_GET['lng'];
 
 $json_data = '{
-                "html": ""
+                "html": "
+                    <div class=\'popup__content popup__geolocation\'>
+                        <div class=\'geolocation\'>
+                            geolocation
+                        </div>
+                    </div>"
 }';
 
 

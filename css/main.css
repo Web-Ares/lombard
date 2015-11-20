@@ -1334,6 +1334,49 @@ p{
 }
 /* -------------- /thanks-popup --------------- */
 
+/* --------------- geolocation --------------- */
+.geolocation {
+    max-width: 409px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    background: #e7e7e7;
+    overflow: hidden;
+}
+.geolocation__title {
+    font-size: 30px;
+    color: #000;
+}
+.geolocation__nice-input {
+    float: left;
+    width: 50%;
+    margin-bottom: 5px;
+}
+.geolocation__nice-input input:not(checked) {
+    display: none;
+}
+.geolocation__nice-input label {
+    display: block;
+    font-size: 14px;
+    color: #000;
+    position: relative;
+}
+.geolocation__nice-input label:before {
+    content: '';
+    display: inline-block;
+    vertical-align: top;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    border: 2px solid #cb0101;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,.5);
+}
+.geolocation__nice-input input:checked + label,
+.geolocation__nice-input input + label:hover {
+    border-color: #2ad219;
+    color: #2ad219;
+}
+/* --------------- /geolocation --------------- */
+
 @media (min-width: 580px) {
     /* --------------- header-info ------------- */
     .header-info {

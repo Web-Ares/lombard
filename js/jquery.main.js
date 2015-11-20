@@ -75,7 +75,15 @@ $(function(){
                     lng: longitude
                 },
                 success: function (msg) {
-                    //$('.').append(msg.html);
+
+                    console.log(msg)
+                    $('.popup .popup__wrap').append(msg.html);
+
+                    $('.popup').each(function(){
+                        popup = new Popup($(this));
+                    });
+
+                    popup.core.show('geolocation');
                 },
                 error: function (XMLHttpRequest) {
                     if (XMLHttpRequest.statusText != "abort") {
@@ -300,6 +308,7 @@ var Popup = function( obj ){
 
     this.init();
 };
+
 Popup.prototype = {
     init: function(){
         var self = this;

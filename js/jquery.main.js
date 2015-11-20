@@ -172,10 +172,12 @@ var Slider = function (obj) {
 
                     myMap.geoObjects.add(new ymaps.Placemark(
                         [coord[0], coord[1]],
-                        {
-                            iconContent: i+1,
-                            balloonContentBody: curElem.find('a').text(),
-                            hintContent: "Описание"
+                        {   hintContent: "Описание",
+                            balloonContentBody: curElem.find('a').text() }, {
+                            iconLayout: 'default#image',
+                            iconImageHref: 'img/map_icon.png',
+                            iconImageSize: [30, 30],
+                            iconImageOffset: [-15, -25]
                         }
                     ));
                 }

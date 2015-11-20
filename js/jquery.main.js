@@ -55,7 +55,7 @@ $(function(){
             var longitude = position.coords.longitude;
 
             $.ajax({
-                url: 'php/form.php',
+                url: 'php/geolocation.php',
                 dataType: 'html',
                 timeout: 20000,
                 type: "GET",
@@ -64,7 +64,7 @@ $(function(){
                     lng: longitude
                 },
                 success: function (msg) {
-                    console.log("You coordinates: ", latitude, ' ', longitude);
+                    //$('.').append(msg.html);
                 },
                 error: function (XMLHttpRequest) {
                     if (XMLHttpRequest.statusText != "abort") {

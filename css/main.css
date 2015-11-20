@@ -58,7 +58,7 @@ p{
 .site__content section{
     max-width: 980px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 .site__header {
     position: relative;
@@ -356,6 +356,9 @@ p{
 /* --------------- cost --------------- */
 .cost{
     margin-top: 40px;
+    background: url("../pic/bg-section.jpg") no-repeat;
+    background-size: cover;
+
 }
 .cost .cost__steps span{
     color: #fff;
@@ -458,6 +461,7 @@ p{
 }
 .site__content .cost{
     padding-bottom: 82px;
+    max-width: 100%;
 }
 .cost .cost__calculator__form .rub_b{
     color: #000;
@@ -992,7 +996,7 @@ p{
     /* --------------- site --------------- */
 
     .site__content section{
-
+        padding: 0 20px;
     }
     .site__footer {
         text-align: left;
@@ -1155,13 +1159,6 @@ p{
         margin-left: 0;
     }
     /* --------------- /news --------------- */
-}
-
-@media (min-width: 1534px) {
-    /* --------------- site --------------- */
-    .site__content .services {
-        max-width: 1534px;
-    }
 
     /* --------------- documents --------------- */
     .documents table tr td{
@@ -1172,4 +1169,13 @@ p{
         padding-top: 29px;
     }
     /* --------------- /documents --------------- */
+}
+
+@media (min-width: 1534px) {
+    /* --------------- site --------------- */
+    .site__content .services {
+        max-width: 1534px;
+    }
+
+
 }

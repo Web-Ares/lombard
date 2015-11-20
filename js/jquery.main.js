@@ -48,6 +48,32 @@ $(function(){
         });
         return false;
     });
+
+    if(navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+
+            $.ajax({
+                url: 'php/form.php',
+                dataType: 'html',
+                timeout: 20000,
+                type: "GET",
+                data: {
+                    lat : latitude,
+                    lng: longitude
+                },
+                success: function (msg) {
+                    console.log("You coordinates: ", latitude, ' ', longitude);
+                },
+                error: function (XMLHttpRequest) {
+                    if (XMLHttpRequest.statusText != "abort") {
+                        alert(XMLHttpRequest.statusText);
+                    }
+                }
+            });
+        });
+    }
 } );
 
 var Sites = function (obj) {

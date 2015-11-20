@@ -571,20 +571,21 @@ p{
 /* --------------- /menu-icon --------------- */
 
 /* --------------- services --------------- */
-.services{
-
+.site__content .services {
+    max-width: 945px;;
+    padding: 0;
+}
+.services .site__title{
+    padding-top: 6px;
 }
 .services ul{
     display: block;
     text-align: center;
 }
-.services ul:first-child{
-    margin-left: 0;
-}
 .services li{
-    width: 300px;
+    width: 221px;
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 15px;
     margin-bottom: 30px;
     vertical-align: top;
 }
@@ -612,14 +613,15 @@ p{
 /* --------------- /about --------------- */
 
 /* --------------- advantages --------------- */
-.advantages{
-
+.site__content .advantages {
+    max-width: 1180px;
+    padding: 0;
 }
 .advantages ul{
     display: block;
     text-align: center;
 }
-.advantages ul:first-child{
+.advantages ul li:first-child{
     margin-left: 0;
 }
 .advantages li{
@@ -660,7 +662,6 @@ p{
     border-radius: 50%;
     opacity: 0.5;
 }
-
 /* --------------- /advantages --------------- */
 
 /* --------------- cost --------------- */
@@ -859,7 +860,7 @@ p{
 
 /* --------------- news --------------- */
 .site__content .news{
-    width: 100%;
+    max-width: 100%;
     position: relative;
     background: url("../pic/bg-section.jpg") no-repeat;
     background-size: cover;
@@ -927,6 +928,9 @@ p{
 .social-contact{
     position: relative;
     margin: 0 auto;
+}
+.site__content .social-contact{
+    padding: 0;
 }
 .social-contact div{
     margin: 0 auto;
@@ -1135,20 +1139,32 @@ p{
 /* --------------- services-page --------------- */
 .services-page>h4{
     font-size: 30px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 26px;
+    margin-bottom: 22px;
+    letter-spacing: 0.3px;
     font-weight: 300;
 }
+.services-page p {
+    margin-bottom: 18px;
+}
 .services-page li{
+    font-size: 14px;
     position: relative;
     margin-left: 25px;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
+}
+.services-page ul li:last-child{
+    margin-bottom: 8px;
+}
+.services-page ul{
+    margin-bottom: 16px;
 }
 .services-page li:before{
     content: "";
     position: absolute;
-    left: -26px;
+    left: -27px;
     width: 20px;
+    top: -3px;
     height: 20px;
     background: #cb0101 url("../img/services-right.png") center no-repeat;
 }
@@ -1163,12 +1179,12 @@ p{
 .services-page__quotes:before{
     content: "";
     position: absolute;
-    top: 0;
-    left: -38px;
-    width: 18px;
-    height: 92px;
-    border: 3px solid #cb0101;
-    border-right:#fff;
+    top: -10px;
+    left: -25px;
+    width: 15px;
+    height: 85px;
+    border: 5px solid #cb0101;
+    border-right: #fff;
 }
 .services-page__rectangle {
     padding-top: 18px;
@@ -1186,27 +1202,36 @@ p{
     font-size: 18px;
     float: left;
     font-weight: 700;
-    margin-right: 10px;
+    margin-right: 4px;
 }
 .services-page dl{
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 .services-page dl dl{
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 .services-page span{
     font-size: 18px;
     display: block;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-top: 28px;
+    margin-bottom: 22px;
 }
 .services-page a{
-    color:#111;
+    display: block;
+    padding-top: 5px;
+    padding-left: 2px;
+    font-size: 14px;
+    color: #111;
     text-decoration: underline;
 }
 .services-page a:hover{
     text-decoration: none;
+}
+.services-page .services-page__term{
+    margin-top: -4px;
+    margin-bottom: 9px;
 }
 /* --------------- /services-page --------------- */
 
@@ -1376,6 +1401,34 @@ p{
     color: #2ad219;
 }
 /* --------------- /geolocation --------------- */
+
+/* -------------- question --------------- */
+.site__content .question{
+    max-width: 100%;
+    height:103px;
+    background: #303030;
+    margin-bottom: 0;
+}
+.question div{
+     text-align: center;
+     color:#fff;
+     font-size: 30px;
+     padding-top: 20px;
+ }
+.question div a{
+    font-size: 30px;
+    color: #fff;
+    display: inline-block;
+    padding-bottom: 4px;
+    border-bottom: 1px dotted #fff;
+    cursor: pointer;
+    transition: border-bottom-color .3s ease;
+    -webkit-transition: border-bottom-color .3s ease;
+}
+.question div a:hover{
+    border: none;
+}
+/* -------------- /question --------------- */
 
 @media (min-width: 580px) {
     /* --------------- header-info ------------- */
@@ -1567,9 +1620,17 @@ p{
     /* --------------- /slider --------------- */
 
     /* --------------- services --------------- */
+    .services-page__quotes:before {
+        top: -10px;
+    }
     .services li{
-        width: 300px;
         margin-bottom: 60px;
+    }
+    .services ul li:first-child{
+        margin-left: 0;
+    }
+    .site__content .services {
+        margin-bottom: -6px;
     }
     /* --------------- /services --------------- */
 
@@ -1584,13 +1645,18 @@ p{
     .address h2 {
         width: 768px;
     }
-
     /* --------------- social-contact --------------- */
     .social-contact div{
         width: 768px;
         height: 180px;
     }
     /* --------------- social-contact --------------- */
+
+    /* --------------- question --------------- */
+    .question div {
+        padding-top: 33px;
+    }
+    /* --------------- /question --------------- */
 
     /* --------------- cost --------------- */
     .site__content .cost{
@@ -1643,16 +1709,16 @@ p{
 
     /* --------------- services-page --------------- */
     .services-page__quotes{
-        margin-left: 40px;
-        padding-top: 17px;
-        line-height: 28px;
+        margin-left: 23px;
+        padding-top: 10px;
+        line-height: 29px;
         font-size: 24px;
-        padding-bottom: 39px;
+        padding-bottom: 44px;
     }
     .services-page__rectangle{
         padding-top: 27px;
         width: 574px;
-        margin-bottom: 10px;
+        margin-bottom: 27px;
     }
     /* --------------- /services-page --------------- */
 }
@@ -1833,8 +1899,7 @@ p{
         max-width: 1534px;
     }
     .services li {
-        width:360px;
-        margin-bottom: 100px;
+        margin-bottom: 59px;
     }
     /* --------------- /services --------------- */
 
@@ -1857,6 +1922,9 @@ p{
     .social-contact div{
         width: 1000px;
         height: 229px;
+    }
+    .site__content .social-contact{
+        margin-bottom: 7px;
     }
     /* --------------- /social-contact --------------- */
 
@@ -1943,28 +2011,25 @@ p{
     }
     .news>div {
         margin-left: 16px;
+        min-height: 500px;
     }
     .news>div:nth-child(2){
         margin-left: 0;
     }
     /* --------------- /news --------------- */
-
-    /* --------------- documents --------------- */
-    .documents table tr td{
-        margin-bottom: 0;
-        margin-left: 111px;
-    }
-    .documents-block{
-        padding-top: 29px;
-    }
-    /* --------------- /documents --------------- */
 }
-
-@media (min-width: 1534px) {
-    /* --------------- site --------------- */
+@media (min-width: 1920px) {
+    /* --------------- services --------------- */
     .site__content .services {
-        max-width: 1534px;
+        margin-bottom: 35px;
     }
-
-
+    .services li {
+        width: 360px;
+        margin-bottom: 100px;
+        margin-left: 20px;
+    }
+    .services ul li:first-child{
+        margin-left: 0;
+    }
+    /* --------------- /services --------------- */
 }

@@ -993,7 +993,96 @@ p{
     display: block;
     margin-bottom: 10px;
 }
+.news-preview p {
+    margin-bottom: 0;
+}
 /* --------------- /news-preview --------------- */
+
+/* --------------- pagination --------------- */
+.pagination {
+    font-size: 14px;
+    color: #bfbfbf;
+    padding: 16px 0;
+    margin-bottom: 30px;
+}
+.pagination li {
+    display: inline-block;
+    vertical-align: top;
+    height: 25px;
+    min-width: 25px;
+    padding: 6px 5px;
+    text-align: center;
+    margin-right: 5px;
+    position: relative;
+}
+.pagination li:first-child {
+    padding-left: 0;
+}
+.pagination li.active {
+    background: #ededed;
+    color: #000;
+}
+.pagination li a,
+.pagination li a:visited {
+    color: #000;
+    text-decoration: underline;
+}
+.pagination li a:hover {
+    text-decoration: none;
+}
+.pagination__prev:before {
+    content: '<';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -7px 0 0 -4px;
+    color: #bfbfbf !important;
+    z-index: 1;
+}
+.pagination__next:after {
+    content: '>';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -7px 0 0 -4px;
+    color: #bfbfbf !important;
+    z-index: 1;
+}
+.pagination li.pagination__prev a:before {
+    content: '<';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -7px 0 0 -4px;
+    color: #000 !important;
+    z-index: 2;
+}
+.pagination li.pagination__next a:after {
+    content: '>';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -7px 0 0 -4px;
+    color: #000 !important;
+    z-index: 2;
+}
+.pagination__next,
+.pagination__prev {
+    color: transparent;
+    width: 25px;
+}
+.pagination li.pagination__next a,
+.pagination li.pagination__prev a {
+    color: transparent;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* --------------- /pagination --------------- */
 
 /* --------------- services-page --------------- */
 .services-page>h4{
@@ -1071,8 +1160,6 @@ p{
 .services-page a:hover{
     text-decoration: none;
 }
-
-
 /* --------------- /services-page --------------- */
 
 /* ------------------ popup ------------------- */
@@ -1210,6 +1297,36 @@ p{
 /* -------------- /thanks-popup --------------- */
 
 @media (min-width: 768px) {
+
+    /* --------------- pagination --------------- */
+    .pagination li {
+        height: 43px;
+        min-width: 43px;
+        padding: 15px 5px;
+    }
+    .pagination__prev:before,
+    .pagination__next:after,
+    .pagination li.pagination__prev a:before,
+    .pagination li.pagination__next a:after {
+        display: none;
+    }
+    .pagination__next,
+    .pagination__prev {
+        color: #bfbfbf;
+        width: auto;
+    }
+    .pagination li.pagination__next a,
+    .pagination li.pagination__prev a {
+        color: #000;
+        display: inline;
+        position: relative;
+        top: auto;
+        left: auto;
+        width: auto;
+        height: auto;
+    }
+
+    /* --------------- /pagination --------------- */
 
     /* --------------- new-detail --------------- */
     .new-detail__pic_left {

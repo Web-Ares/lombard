@@ -75,13 +75,16 @@ $(function(){
                 type: "get",
                 success: function (msg) {
 
-                    $('.popup .popup__wrap').append(msg.html);
+                   if (msg.html) {
+                       $('.popup .popup__wrap').append(msg.html);
 
-                    $('.popup').each(function(){
-                        popup = new Popup($(this));
-                    });
+                       $('.popup').each(function(){
+                           popup = new Popup($(this));
+                       });
 
-                    popup.core.show('geolocation');
+                       popup.core.show('geolocation');
+                   }
+
                 },
                 error: function (XMLHttpRequest) {
                     if (XMLHttpRequest.statusText != "abort") {

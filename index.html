@@ -19,16 +19,76 @@
     <div class="site">
         <!-- /site__header -->
         <header class="site__header">
-            <!-- logo -->
-            <h1 class="logo">
-                <img src="img/logo.png" alt="">
-            </h1>
-            <!-- /logo -->
-            <!-- header__menu -->
-            <nav class="header__menu">
-                <a href="#"></a>
+            <!-- sites -->
+            <div class="sites">
+                <!-- site__header-layout -->
+                <div class="site__header-layout">
+                    <!-- sites__close -->
+                    <div class="sites__close"></div>
+                    <!-- /sites__close -->
+                    <!-- site__title -->
+                    <h2 class="site__title">
+                        <span>Все сайты группы компаний СКС ломбард</span>
+                    </h2>
+                    <!-- /site__title -->
+                    <a href="#" target="_blank">
+                        <img src="img/site-001.jpg" alt="img"/>
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="img/site-002.jpg" alt="img"/>
+                    </a>
+                    <!-- sites__tail -->
+                    <div class="sites__tail">
+                        <span>Наши сайты</span>
+                    </div>
+                    <!-- /sites__tail -->
+                </div>
+                <!-- /site__header-layout -->
+            </div>
+            <!-- /sites -->
+            <!-- site__header-layout -->
+            <div class="site__header-layout">
+                <!-- logo -->
+                <h1 class="logo">
+                    <img src="img/logo.png" width="" height="" alt="Ломбард Группа компаний СКС ломбард Кредиты, займы, скупка золота">
+                </h1>
+                <!-- /logo -->
+                <!-- header-info -->
+                <div class="header-info">
+                    <a class="header-info__phone" href="tel:+73472463470">+7 347 <span>246 34 70</span></a>
+                    <a class="header-info__vk"></a>
+                    <!-- menu-icon -->
+                    <div class="menu-icon">
+                        <span></span>
+                    </div>
+                    <!-- menu-icon -->
+                    <div class="header-info__city">Ваш город: <a>Уфа</a></div>
+                    <a class="header-info__callback popup__open" data-popup="callback">Заказать звонок</a>
+                </div>
+                <!-- /header-info -->
+            </div>
+            <!-- header-menu -->
+            <nav class="header-menu">
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li class="sub-menu">
+                        <a href="#">О компании</a>
+                        <ul>
+                            <li><a href="#">Миссия</a></li>
+                            <li><a href="#">Руководство</a></li>
+                            <li><a href="#">История</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                    <li><a href="#">Адрес</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#" class="btn_debt">% Узнай задолженность</a></li>
+                </ul>
             </nav>
-            <!-- /header__menu -->
+            <!-- /header-menu -->
+            <!-- /site__header-layout -->
         </header>
         <!-- /site__header -->
 
@@ -412,7 +472,71 @@
         <!-- /site__footer -->
     </div>
     <!-- /site -->
+    <!-- popup -->
+    <div class="popup">
+        <!-- popup__wrap -->
+        <div class="popup__wrap">
+            <!-- popup__content -->
+            <div class="popup__content popup__callback">
+                <!-- callback-popup -->
+                <div class="callback-popup">
+                    <!-- callback-popup__content -->
+                    <div class="callback-popup__content">
+                        <h2>Онлайн-заявка</h2>
+                        <form class="callback__form" action="#">
+                            <label for="callback-popup__service">Услуга</label>
+                            <select name="callback-popup__service" id="callback-popup__service">
+                                <option value="Автоломбард деньги под залог автомобиля">Автоломбард деньги под залог автомобиля</option>
+                                <option value="Домоломбард деньги под залог дома">Домоломбард деньги под залог дома</option>
+                                <option value="Человеко деньги под залог раба">Человеко деньги под залог раба</option>
+                            </select>
+                            <label for="callback-popup__name">фио</label>
+                            <input type="text" name="callback-popup__name" id="callback-popup__name"/>
+                            <label for="callback-popup__phone">контактный телефон <span>*</span></label>
+                            <input type="tel" name="callback-popup__phone" id="callback-popup__phone"/>
+                            <label for="callback-popup__message">дополнительная информация</label>
+                            <input type="text" name="callback-popup__message" id="callback-popup__message"/>
+                            <div class="captcha">
+                                <div></div>
+                                <span>Защита от автоматического заполнения</span>
+                                <label for="callback-popup__captcha">введите символы с картинки <span>*</span></label>
+                                <input type="text" name="callback-popup__captcha" id="callback-popup__captcha"/>
+                            </div>
+                            <div class="note"><span>*</span> - обязательные поля</div>
+                            <input type="submit" class="btn" name="callback-popup__send" id="callback-popup__send" value="Отправить"/>
+                            <!-- popup__close -->
+                            <button class="popup__close">ЗАКРЫТЬ</button>
+                            <!-- /popup__close -->
+                        </form>
+                    </div>
+                    <!-- /callback-popup_content -->
+                </div>
+                <!-- /callback-popup -->
+            </div>
+            <!-- popup__content -->
+            <!-- popup__content -->
+            <div class="popup__content popup__thanks">
+                <!-- thanks-popup -->
+                <div class="thanks-popup">
+                    <!-- thanks-popup__content -->
+                    <div class="thanks-popup__content">
+                        <div class="thanks-popup__topic">Спасибо</div>
+                        <span>Наш менеджер свяжется с Вами в указанное время</span>
+                    </div>
+                    <!-- /thanks-popup__content -->
+                </div>
+                <!-- /thanks__content -->
+            </div>
+            <!-- /popup__content -->
+
+        </div>
+        <!-- /popup__wrap -->
+    </div>
+    <!-- /popup -->
     <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.select.js"></script>
+    <script src="js/jjquery.nicescroll.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"> </script>
     <script src="js/jquery.main.js"></script>

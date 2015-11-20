@@ -57,15 +57,21 @@ p{
 .site__content section{
     max-width: 980px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 .site__header {
     position: relative;
-
-    height: 100px;
-    background: red;
+    padding-top: 7px;
+    box-shadow: 0 0 10px #666;
+    background: url("../pic/bg-section.jpg") no-repeat 50% 100%;
     z-index: 3;
-
+}
+.site__header-layout{
+    position: relative;
+    max-width: 940px;
+    height: 125px;
+    margin: 0 auto;
+    padding-top: 13px;
 }
 .site__footer {
     z-index: 2;
@@ -569,9 +575,6 @@ p{
     display: block;
     text-align: center;
 }
-.services ul li:first-child{
-    margin-left: 0;
-}
 .services li{
     width: 221px;
     display: inline-block;
@@ -652,7 +655,6 @@ p{
     border-radius: 50%;
     opacity: 0.5;
 }
-
 /* --------------- /advantages --------------- */
 
 /* --------------- cost --------------- */
@@ -916,12 +918,16 @@ p{
 /* --------------- /news --------------- */
 
 /* --------------- social-contact --------------- */
+.social-contact{
+    position: relative;
+    margin: 0 auto;
+}
 .site__content .social-contact{
     padding: 0;
-    margin-bottom: 7px;
 }
 .social-contact div{
     margin: 0 auto;
+    width: 320px;
     height: 100px;
 }
 .social-contact div img{
@@ -1166,7 +1172,7 @@ p{
 .services-page__quotes:before{
     content: "";
     position: absolute;
-    top: 0;
+    top: -10px;
     left: -25px;
     width: 15px;
     height: 85px;
@@ -1341,6 +1347,34 @@ p{
     background-color: #9d9e9e;
 }
 /* -------------- /thanks-popup --------------- */
+
+/* -------------- question --------------- */
+.site__content .question{
+    max-width: 100%;
+    height:103px;
+    background: #303030;
+    margin-bottom: 0;
+}
+.question div{
+     text-align: center;
+     color:#fff;
+     font-size: 30px;
+     padding-top: 20px;
+ }
+.question div a{
+    font-size: 30px;
+    color: #fff;
+    display: inline-block;
+    padding-bottom: 4px;
+    border-bottom: 1px dotted #fff;
+    cursor: pointer;
+    transition: border-bottom-color .3s ease;
+    -webkit-transition: border-bottom-color .3s ease;
+}
+.question div a:hover{
+    border: none;
+}
+/* -------------- /question --------------- */
 
 @media (min-width: 580px) {
     /* --------------- header-info ------------- */
@@ -1532,8 +1566,14 @@ p{
     /* --------------- /slider --------------- */
 
     /* --------------- services --------------- */
+    .services-page__quotes:before {
+        top: -10px;
+    }
     .services li{
         margin-bottom: 60px;
+    }
+    .services ul li:first-child{
+        margin-left: 0;
     }
     .site__content .services {
         margin-bottom: -6px;
@@ -1557,6 +1597,12 @@ p{
         height: 180px;
     }
     /* --------------- social-contact --------------- */
+
+    /* --------------- question --------------- */
+    .question div {
+        padding-top: 33px;
+    }
+    /* --------------- /question --------------- */
 
     /* --------------- cost --------------- */
     .site__content .cost{
@@ -1799,11 +1845,14 @@ p{
         max-width: 1534px;
     }
     .services li {
-        width:360px;
-        margin-bottom: 100px;
+        margin-bottom: 59px;
     }
     /* --------------- /services --------------- */
-    
+
+    /* --------------- /advantages --------------- */
+    .site__content .advantages {
+        max-width: 1196px;
+    }
     .advantages li{
         width: 221px;
     }
@@ -1819,6 +1868,9 @@ p{
     .social-contact div{
         width: 1000px;
         height: 229px;
+    }
+    .site__content .social-contact{
+        margin-bottom: 7px;
     }
     /* --------------- /social-contact --------------- */
 

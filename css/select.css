@@ -1,0 +1,78 @@
+.ares-select{
+    position: relative;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 200px;
+    height: 22px;
+    border: 1px solid #000;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+}
+.ares-select:after{
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 20px;
+    border-left: 1px solid #000;
+    top: 0;
+    bottom: 0;
+}
+.ares-select__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 20px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    padding: 1px 5px 0;
+}
+.ares-select_mobile select {
+    position: absolute;
+    top: 0;
+    left: 1px;
+    width: 100%;
+    bottom: -1px;
+}
+.ares-select_custom select{
+    position: absolute;
+    left: -100000px;
+}
+.ares-select__popup {
+    position: absolute;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 1px solid #000;
+    overflow: hidden;
+    z-index: 10;
+}
+.ares-select__popup ul {
+    z-index: 1;
+}
+.ares-select__popup li{
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+}
+.ares-select__popup li.active {
+    color: #fff;
+    background: #f00;
+}
+.ares-select__popup .iScrollVerticalScrollbar {
+    position: absolute;
+    width: 15px;
+    top: 0;
+    bottom: 0;
+    background: #ccc;
+    right: 0;
+    z-index: 3;
+    -webkit-transform: translateZ(0);
+}
+.ares-select__popup .iScrollIndicator {
+    background: #aaa;
+}

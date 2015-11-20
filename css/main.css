@@ -189,10 +189,17 @@ p{
     border: none;
     background-color: #cb0101;
     font-weight: 600;
+    transition: background-color .3s ease;
+    -webkit-transition: background-color .3s ease;
+}
+.btn_debt a{
     color: #fff!important;
 }
 .btn_debt:hover{
     background-color: #9f0202;
+}
+.btn_debt:after{
+    display: none;
 }
 /* --------------- /btn --------------- */
 
@@ -1231,7 +1238,7 @@ p{
 }
 .popup__wrap {
     position: relative;
-    width: 600px;
+    width: 460px;
     margin: 0 auto;
     z-index: 2;
 }
@@ -1247,7 +1254,11 @@ p{
     text-align: left;
     transition: opacity .3s ease;
     -webkit-transition: opacity .3s ease;
-    background-color: #fff;
+    background: rgb(255,255,255);
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(227,227,227,1) 73%);
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(227,227,227,1) 73%);
+    background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgba(227,227,227,1) 73%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e3e3e3',GradientType=1 );
 }
 .popup__content h2{
     margin-bottom: 35px;
@@ -1905,7 +1916,6 @@ p{
     }
     /* --------------- /documents --------------- */
 }
-
 
 @media (min-width: 1534px) {
     /* --------------- site --------------- */

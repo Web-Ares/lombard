@@ -69,7 +69,7 @@ p{
 .site__header-layout{
     position: relative;
     max-width: 940px;
-    height: 147px;
+    height: 125px;
     margin: 0 auto;
     padding-top: 13px;
 }
@@ -200,20 +200,20 @@ p{
 .header-info{
     position: absolute;
     top: 26px;
-    right: 0;
-    width: 291px;
+    right: 15px;
+    left: 41px;
     text-align: right;
 }
 .header-info__phone{
+    position: absolute;
+    top: 68px;
+    right: 0;
     display: inline-block;
     vertical-align: middle;
     margin-bottom: 24px;
     font-size: 18px;
     color: #000;
     cursor: default;
-}
-.header-info__phone span{
-    font-size: 30px;
 }
 .header-info__vk{
     display: inline-block;
@@ -231,14 +231,15 @@ p{
     opacity: .7;
 }
 .header-info__city{
+    display: inline-block;
     float: left;
     position: relative;
+    margin-top: 70px;
     padding-top: 2px;
     font-size: 14px;
 }
 .header-info__city a{
     display: inline-block;
-    margin-left: 9px;
     padding-bottom: 4px;
     border-bottom: 1px dotted #000;
     cursor: pointer;
@@ -259,7 +260,7 @@ p{
 }
 .header-info__callback{
     position: relative;
-    display: inline-block;
+    display: none;
     padding-bottom: 4px;
     border-bottom: 1px dotted #000;
     font-size: 14px;
@@ -286,10 +287,10 @@ p{
 /* ----------------- sites ----------------- */
 .sites{
     position: absolute;
-    top: -210px;
+    top: -173px;
     left: 0;
     right: 0;
-    height: 212px;
+    height: 175px;
     background-color: #cb0101;
     text-align: center;
     z-index: 10;
@@ -300,10 +301,11 @@ p{
     top: 0;
 }
 .sites > div{
-    height: 212px;
+    height: 175px;
 }
 .sites > div > a{
     display: inline-block;
+    width: 115px;
     margin: -2px 10px;
     border: 2px solid transparent;
     transition: border-color .3s ease;
@@ -314,13 +316,14 @@ p{
 }
 .sites > div > a img{
     display: block;
+    width: 100%;
 }
 .sites__tail{
     position: absolute;
     top: 100%;
     left: 50%;
     width: 108px;
-    height: 34px;
+    height: 25px;
     margin-left: -54px;
     font-size: 14px;
     background-color: #cb0101;
@@ -330,13 +333,12 @@ p{
 }
 .sites__tail span{
     display: inline-block;
-    padding-bottom: 5px;
     border-bottom: 1px dotted #fff;
     transition: transform .3s ease;
     -webkit-transition: transform .3s ease;
 }
 .sites__tail:hover{
-    height: 37px;
+    height: 28px;
 }
 .steel:hover{
     height: 34px
@@ -352,7 +354,7 @@ p{
 .sites__close{
     position: absolute;
     top: 21px;
-    right: 0;
+    right: 15px;
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -365,24 +367,68 @@ p{
 .sites__close:hover{
     box-shadow: 0 0 10px #fff;
 }
-.sites  .site__title{
-    margin-bottom: 20px;
+.sites .site__title{
+    font-size: 14px;
+    margin-bottom: 10px;
 }
-.sites  .site__title span{
+.sites .site__title span{
     color: #fff;
 }
 .sites .site__title span::before,
 .sites .site__title span::after{
-    background-color: #fff  ;
+    top: 9px;
+    height: 1px;
+    background-color: #fff;
 }
 /* ----------------- /sites ----------------- */
 
 /* --------------- header-menu ------------- */
 .header-menu{
-    display: none;
     position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 40px;
+    background-color: rgba(0,0,0,.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility .3s ease;
+    -webkit-transition: opacity .3s ease, visibility .3s ease;
+    z-index: 8;
+}
+.header-menu li a {
+    display: block;
+    height: 40px;
+    padding: 11px 20px;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    transition: background-color .3s ease;
+    -webkit-transition: background-color .3s ease;
+    cursor: pointer;
+}
+.header-menu li:last-child a{
+    border-bottom: none;
+}
+.header-menu > ul a:hover{
+    background-color: #cb0101;
+}
+.header-menu ul ul {
+    display: none;
+}
+.header-menu ul ul li {
+    padding-left: 40px;
+}
+.header-menu > ul ul li:last-child{
+    border-bottom: 1px solid #fff;
 }
 /* --------------- /header-menu ------------- */
+
+/* --------------- mobile-menu ------------- */
+.mobile-menu{
+    opacity: 1;
+    visibility: visible;
+}
+/* --------------- mobile-menu ------------- */
 
 /* --------------- slider --------------- */
 .slider {
@@ -472,6 +518,7 @@ p{
     position: relative;
     top: 1px;
     width: 27px;
+    margin-left: 10px;
     margin-bottom: 18px;
     padding: 10px 0;
     z-index: 9;
@@ -504,25 +551,15 @@ p{
 .menu-icon:hover span:after {
     background-color: #000;
 }
-.close-menu:before {
-    content: '';
-    position: absolute;
-    top: -12px;
-    left: -7px;
-    right: -7px;
-    bottom: -6px;
-    border: 1px solid #000;
-    background: rgb(245,245,245);
-    background: -moz-linear-gradient(left,  rgba(245,245,245,1) 0%, rgba(255,255,255,1) 100%);
-    background: -webkit-linear-gradient(left,  rgba(245,245,245,1) 0%,rgba(255,255,255,1) 100%);
-    background: linear-gradient(to right,  rgba(245,245,245,1) 0%,rgba(255,255,255,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#ffffff',GradientType=1 );
-    z-index: -1;
-}
 .close-menu span,
 .close-menu span:before,
 .close-menu span:after {
-    background-color: #000;
+    background-color: #fff;
+}
+.close-menu:hover span,
+.close-menu:hover span:before,
+.close-menu:hover span:after {
+    background-color: #cb0101;
 }
 /* --------------- /menu-icon --------------- */
 
@@ -915,9 +952,13 @@ p{
 
 /* --------------- logo --------------- */
 .logo {
-    position: absolute;
-    top: 13px;
-    left: 0;
+    display: block;
+    width: 200px;
+    margin: 14px 0 0 15px;
+}
+.logo img{
+    display: block;
+    width: 100%;
 }
 /* --------------- /logo --------------- */
 
@@ -1172,7 +1213,6 @@ p{
     height: 0;
     padding-top: 10px;
     font-size: 14px;
-    font-family: 'Open Sans', sans-serif;
     background: rgba(32, 32, 32, 0.7) none repeat scroll 0 0;
     opacity: 0;
     -webkit-transition: opacity 500ms ease-in-out 0s;
@@ -1202,38 +1242,35 @@ p{
 }
 .popup__content > div{
     position: relative;
-    width: 600px;
+    width: 460px;
     padding: 28px 34px 28px 37px;
     text-align: left;
     transition: opacity .3s ease;
     -webkit-transition: opacity .3s ease;
-    background: url("../img/bg-modal.jpg") no-repeat 50% 100%;
+    background-color: #fff;
 }
 .popup__content h2{
     margin-bottom: 35px;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 400;
-    text-align: center;
 }
 .popup__content label{
-    display: inline-block;
-    padding: 6px 12px;
-    color: #fff;
+    display: block;
+    color: #979797;
     text-transform: uppercase;
-    background-color: #9d9e9e;
 }
 .popup__content input,
+.popup__content select,
 .popup__content textarea{
     display: block;
     width: 100%;
     height: 49px;
     margin-bottom: 20px;
     padding: 0 15px;
-    border: none;
-    border-top: 2px solid #b2b2b2;
-    border-left: 2px solid #b2b2b2;
-    font: 14px 'Open Sans', sans-serif;
-    background-color: #f6f6f6;
+    border: 1px solid #bebebe;
+    border-radius: 5px;
+    font: 14px 'Ubuntu', sans-serif;
+    background-color: #fff;
     box-shadow: none;
 }
 .popup__content textarea{
@@ -1241,38 +1278,28 @@ p{
     padding: 10px 15px;
 }
 .popup__content .btn{
-    width: 130px;
-    height: 37px;
+    width: 100%;
+    height: 38px;
     margin: 0 auto;
     color: #fff;
     border: none;
-    border-bottom: 2px solid #f3bb00;
-    background-color: #434242;
+    border-radius: 0;
+    background-color: #cb0101;
+    font-size: 18px;
+    font-weight: 600;
     transition: background-color .3s ease, color .3s ease;
     -webkit-transition: background-color .3s ease, color .3s ease;
 }
 .popup__content .btn:hover{
-    color: #434242;
-    background-color: #d9decd;
-}
-.popup__btn-wrap{
-    text-align: center;
+
 }
 .popup__close{
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    width: 12px;
-    height: 11px;
     border: none;
-    text-indent: -9999px;
-    background: url("../img/icons-close.png") transparent;
     transition: transform .3s ease;
     -webkit-transition: transform .3s ease;
 }
 .popup__close:hover{
-    transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
+
 }
 /* ----------------- /popup ------------------- */
 
@@ -1295,6 +1322,32 @@ p{
     background-color: #9d9e9e;
 }
 /* -------------- /thanks-popup --------------- */
+
+@media (min-width: 580px) {
+    /* --------------- header-info ------------- */
+    .header-info {
+        left: auto;
+        width: 291px;
+    }
+    .header-info__callback{
+        display: inline-block;
+    }
+    .header-info__city{
+        margin-top: 0;
+    }
+    .header-info__city a {
+        margin-left: 9px;
+    }
+    .header-info__phone{
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+    .header-info__phone span {
+        font-size: 30px;
+    }
+    /* --------------- /header-info ------------- */
+}
 
 @media (min-width: 768px) {
 
@@ -1357,6 +1410,47 @@ p{
         padding: 0 0 0 10px;
     }
     /* --------------- /news-preview --------------- */
+
+    /* ----------------- sites ----------------- */
+    .sites{
+        top: -210px;
+        height: 212px;
+    }
+    .sites > div{
+        height: 212px;
+    }
+    .sites > div > a{
+        width: 150px;
+    }
+    .sites .site__title{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .sites .site__title span::before,
+    .sites .site__title span::after{
+        top: 19px;
+        height: 3px;
+    }
+    .sites__tail {
+        height: 33px;
+    }
+    .sites__tail span {
+        padding-bottom: 5px;
+    }
+    .sites__tail:hover{
+        height: 37px;
+    }
+    /* ----------------- /sites ----------------- */
+
+    /* --------------- logo --------------- */
+    .logo {
+        position: absolute;
+        top: 13px;
+        left: 15px;
+        width: auto;
+        margin: 0;
+    }
+    /* --------------- /logo --------------- */
 
     /* --------------- site --------------- */
     .site__content section{
@@ -1514,6 +1608,9 @@ p{
     .site__content section{
         padding: 0 20px;
     }
+    .site__header-layout{
+        height: 147px;
+    }
     .site__footer {
         text-align: left;
     }
@@ -1552,15 +1649,17 @@ p{
 
     /* --------------- header-menu ------------- */
     .header-menu{
-        display: block;
         position: relative;
         top: 0;
         left: 0;
+        padding-top: 0;
         background: rgb(255,255,255);
         background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(237,237,237,1) 100%);
         background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(237,237,237,1) 100%);
         background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(237,237,237,1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 );
+        opacity: 1;
+        visibility: visible;
     }
     .header-menu > ul{
         display: table;
@@ -1590,6 +1689,9 @@ p{
     .header-menu > ul > li:hover:after{
         opacity: 1;
     }
+    .header-menu > ul > li:hover a{
+        background: none;
+    }
     .header-menu > ul  li a{
         display: block;
     }
@@ -1606,6 +1708,7 @@ p{
         z-index: 2;
     }
     .header-menu > ul ul{
+        display: block;
         position: absolute;
         top: 100%;
         left: 0;
@@ -1617,9 +1720,16 @@ p{
         transition: visibility .3s ease, opacity .3s ease;
         -webkit-transition: visibility .3s ease, opacity .3s ease;
     }
+    .header-menu > ul ul li{
+        padding-left: 0;
+    }
+    .header-menu > ul ul li:last-child{
+        border-bottom: none;
+    }
     .header-menu > ul ul a{
         height: 31px;
         padding: 6px 0 0 24px;
+        border-bottom: none;
         color: #fff;
         transition: background-color .3s ease;
         -webkit-transition: background-color .3s ease;
@@ -1651,6 +1761,18 @@ p{
         display: none;
     }
     /* --------------- /menu-icon --------------- */
+
+    /* ----------------- sites ----------------- */
+    .sites__close {
+        right: 0;
+    }
+    /* ----------------- /sites ----------------- */
+
+    /* --------------- header-info ------------- */
+    .header-info{
+        right: 0;
+    }
+    /* --------------- /header-info ------------- */
 
     /* --------------- services --------------- */
     .services {
@@ -1749,6 +1871,13 @@ p{
 
     }
     /* --------------- /breadcrumbs --------------- */
+
+    /* --------------- logo --------------- */
+    .logo {
+        top: 13px;
+        left: 0;
+    }
+    /* --------------- /logo --------------- */
 
     /* --------------- news --------------- */
     .news .site__title {

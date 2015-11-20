@@ -6,11 +6,7 @@ $(function(){
             input=0.6*$('.calc_enter').val();
             input=input.toFixed(0);
             input=input.toString();
-            console.log(typeof (input));
-
             return_val = input.replace(/[^\d]/g, "").replace(/(\d)(?=(?:\d{3})+$)/g, "$1 ");
-            //$('.calc_enter').val(return_val);
-
 
             $('.result').html(return_val+' '+ '<span class="rub">P</span>');
             $('.placeholder').html('0');

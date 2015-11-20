@@ -58,7 +58,7 @@ p{
 .site__content section{
     max-width: 980px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 .site__header {
     position: relative;
@@ -371,9 +371,7 @@ p{
 
 /* --------------- services --------------- */
 .services{
-    width: 320px;
-    position: relative;
-    margin: 0 auto;
+
 }
 .services ul{
     display: block;
@@ -414,9 +412,7 @@ p{
 
 /* --------------- advantages --------------- */
 .advantages{
-    width: 320px;
-    position: relative;
-    margin: 0 auto;
+
 }
 .advantages ul{
     display: block;
@@ -469,6 +465,9 @@ p{
 /* --------------- cost --------------- */
 .cost{
     margin-top: 40px;
+    background: url("../pic/bg-section.jpg") no-repeat;
+    background-size: cover;
+
 }
 .cost .cost__steps span{
     color: #fff;
@@ -571,6 +570,7 @@ p{
 }
 .site__content .cost{
     padding-bottom: 82px;
+    max-width: 100%;
 }
 .cost .cost__calculator__form .rub_b{
     color: #000;
@@ -838,6 +838,86 @@ p{
 }
 /* --------------- /news-preview --------------- */
 
+/* --------------- services-page --------------- */
+.services-page>h4{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+.services-page li{
+    position: relative;
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+.services-page li:before{
+    content: "";
+    position: absolute;
+    left: -26px;
+    width: 20px;
+    height: 20px;
+    background: #cb0101 url("../img/services-right.png") center no-repeat;
+}
+.services-page__quotes {
+    position: relative;
+    display: block;
+    margin-left: 38px;
+    line-height: 24px;
+    font-size: 17px;
+    padding-bottom: 34px;
+}
+.services-page__quotes:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -38px;
+    width: 18px;
+    height: 92px;
+    border: 3px solid #cb0101;
+    border-right:#fff;
+}
+.services-page__rectangle {
+    padding-top: 18px;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    width: 300px;
+    height: 81px;
+    background: url("../pic/service-bg1.jpg");
+    background-size: contain;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+.services-page dl dt{
+    font-size: 18px;
+    float: left;
+    font-weight: 700;
+    margin-right: 10px;
+}
+.services-page dl{
+    margin-bottom: 20px;
+}
+.services-page dl dl{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.services-page span{
+    font-size: 18px;
+    display: block;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.services-page a{
+    color:#111;
+    text-decoration: underline;
+}
+.services-page a:hover{
+    text-decoration: none;
+}
+
+
+/* --------------- /services-page --------------- */
+
 @media (min-width: 768px) {
 
     /* --------------- new-detail --------------- */
@@ -931,9 +1011,6 @@ p{
     /* --------------- /slider --------------- */
 
     /* --------------- services --------------- */
-    .services {
-        width: 650px;
-    }
     .services li{
         width: 300px;
         margin-bottom: 60px;
@@ -941,9 +1018,6 @@ p{
     /* --------------- /services --------------- */
 
     /* --------------- advantages --------------- */
-    .advantages {
-        width: 650px;
-    }
     .advantages li{
         width: 221px;
     }
@@ -1010,12 +1084,27 @@ p{
         width: 460px;
     }
     /* --------------- /news --------------- */
+
+    /* --------------- services-page --------------- */
+    .services-page__quotes{
+        margin-left: 40px;
+        padding-top: 17px;
+        line-height: 28px;
+        font-size: 24px;
+        padding-bottom: 39px;
+    }
+    .services-page__rectangle{
+        padding-top: 27px;
+        width: 574px;
+        margin-bottom: 10px;
+    }
+    /* --------------- /services-page --------------- */
 }
 
 @media (min-width: 1024px) {
     /* --------------- site --------------- */
     .site__content section{
-
+        padding: 0 20px;
     }
     .site__footer {
         text-align: left;
@@ -1147,7 +1236,7 @@ p{
 
     /* --------------- services --------------- */
     .services {
-        width: 1534px;
+        max-width: 1534px;
     }
     .services li {
         width:360px;
@@ -1156,8 +1245,8 @@ p{
     /* --------------- /services --------------- */
 
     /* --------------- /advantages --------------- */
-    .advantages {
-        width: 1196px;
+    .site__content .advantages {
+        max-width: 1196px;
     }
     .advantages li{
         width: 221px;
@@ -1267,4 +1356,13 @@ p{
         padding-top: 29px;
     }
     /* --------------- /documents --------------- */
+}
+
+@media (min-width: 1534px) {
+    /* --------------- site --------------- */
+    .site__content .services {
+        max-width: 1534px;
+    }
+
+
 }

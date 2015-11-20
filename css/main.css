@@ -607,7 +607,7 @@ p{
 
 /* --------------- about --------------- */
 .about .site__title{
-   text-align: left;
+    text-align: left;
 }
 /* --------------- /about --------------- */
 
@@ -1335,33 +1335,70 @@ p{
 /* -------------- /thanks-popup --------------- */
 
 /* --------------- geolocation --------------- */
-.geolocation {
+.popup__content > div.geolocation {
     max-width: 409px;
     margin: 0 auto;
-    padding: 20px 20px;
+    padding: 18px 20px 34px;
     background: #e7e7e7;
     overflow: hidden;
+}
+.geolocation .popup__close {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    font-size: 14px;
+    color: #000;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.geolocation .popup__close:after {
+    content: '';
+    background: url("../img/close.png") no-repeat;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 1px 0 0 11px;
 }
 .geolocation__title {
     font-size: 30px;
     color: #000;
+    display: block;
+    margin-bottom: 30px;
+}
+.geolocation dl {
+    padding: 0 2px;
+    font-size: 14px;
+    color: #000;
+}
+.geolocation dt {
+    color: #979797;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 23px;
+}
+.geolocation dd {
+
 }
 .geolocation__nice-input {
     float: left;
-    width: 50%;
-    margin-bottom: 5px;
+    width: 49%;
+    margin-bottom: 30px;
 }
 .geolocation__nice-input input:not(checked) {
     display: none;
 }
 .geolocation__nice-input label {
     display: block;
-    font-size: 14px;
-    color: #000;
     position: relative;
+    padding-left: 37px;
+    text-transform: none;
 }
 .geolocation__nice-input label:before {
     content: '';
+    position: absolute;
+    top: -6px;
+    left: 0;
     display: inline-block;
     vertical-align: top;
     width: 27px;
@@ -1369,11 +1406,25 @@ p{
     border-radius: 50%;
     border: 2px solid #cb0101;
     box-shadow: inset 2px 2px 5px rgba(0,0,0,.5);
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
-.geolocation__nice-input input:checked + label,
-.geolocation__nice-input input + label:hover {
-    border-color: #2ad219;
-    color: #2ad219;
+.geolocation__nice-input label:after {
+    content: '';
+    display: inline-block;
+    vertical-align: top;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: transparent;
+    position: absolute;
+    top: 1px;
+    left: 7px;
+    -webkit-transition: background .3s ease;
+    transition: background .3s ease;
+}
+.geolocation__nice-input input:checked + label:after {
+    background: #cb0101;
 }
 /* --------------- /geolocation --------------- */
 
@@ -1634,7 +1685,7 @@ p{
         margin: 32px auto 0;
     }
     /* --------------- /breadcrumbs --------------- */
-    
+
     /* --------------- news --------------- */
     .news>div{
         width: 460px;

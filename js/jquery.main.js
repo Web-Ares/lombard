@@ -67,16 +67,14 @@ $(function(){
 
             $.ajax({
                 url: 'php/geolocation.php',
-                dataType: 'html',
-                timeout: 20000,
-                type: "GET",
                 data: {
                     lat : latitude,
                     lng: longitude
                 },
+                dataType: 'json',
+                type: "get",
                 success: function (msg) {
 
-                    console.log(msg)
                     $('.popup .popup__wrap').append(msg.html);
 
                     $('.popup').each(function(){

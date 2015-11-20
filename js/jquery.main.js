@@ -3,27 +3,18 @@ $(function(){
 
     $('.calc_enter').on( 'input', function() {
 
-            input=0.6*$('.calc_enter').val();
-            input=input.toFixed(0);
-        var string_val=String(input),
-            string_val1=String(input);
+        input=0.6*$('.calc_enter').val();
+        input=input.toFixed(0);
+        input=input.toString();
+        console.log(typeof (input));
 
-            var number_of=input.length;
-        console.log( string_val[0])
+        return_val = input.replace(/[^\d]/g, "").replace(/(\d)(?=(?:\d{3})+$)/g, "$1 ");
+        //$('.calc_enter').val(return_val);
 
-            // (var i =number_of ; i--; ) {
-            //     var stringv=string_val1;
-            //    stringv[i]=string_val[i]+' ';
-            //    //if (i%3==0){
-            //    //
-            //    //}
-            //
-            //}
-        //span.innerHTML=span.innerHTML.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 
-        //$('.result').html(stringv+' '+ '<span class="rub">P</span>');
-        //    $('.placeholder').html('0');
-        //    $(".calc_enter").attr("placeholder", "0");
+        $('.result').html(return_val+' '+ '<span class="rub">P</span>');
+        $('.placeholder').html('0');
+        $(".calc_enter").attr("placeholder", "0");
     });
 
     $('.sites').each(function () {

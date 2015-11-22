@@ -868,24 +868,32 @@ p{
     text-align: center;
     margin-bottom: 20px;
 }
-.news div a{
+.news__colon{
+    position: relative;
+    margin: 0 auto;
+    display: table;
+}
+.news__colon ul{
+    display: table-row;
+}
+.news__colon ul li div a{
     color:#111;
     font-size: 18px;
     text-decoration: underline;
     line-height: 24px;
 }
-.news a:hover{
+.news__colon a:hover{
     text-decoration: none;
 }
-.news>div{
-    display: inline-block;
+.news__colon>ul>li{
+    display: table-row;
     vertical-align: top;
     width:300px;
     box-shadow: 0 0 7px #cecece;
     background: #fff;
     text-align: left;
 }
-.news>div div{
+.news__colon>ul li div{
     padding-bottom: 26px;
     margin-bottom: 27px;
     border-bottom: 1px solid #cecece;
@@ -893,26 +901,25 @@ p{
     padding-right: 5px;
     margin-top:19px;
 }
-.news>div div:last-child{
+.news__colon>ul li div:last-child{
     border-bottom: none;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 }
-.news div img{
+.news__colon ul li img{
     width: 100%;
     height: 239px;
     margin-bottom: 3px;
 }
-.news time{
+.news__colon time{
     display: block;
     color: #cecece;
     font-size: 14px;
     margin-bottom: 10px;
     margin-top: 10px;
 }
-.news p{
+.news__colon p{
     padding-top: 19px;
     padding-right: 23px;
-    padding-bottom: 20px;
 }
 .news__all{
     display:block;
@@ -921,6 +928,10 @@ p{
     font-size: 14px;
     text-decoration: underline;
     text-align: center;
+}
+.news__colon>ul li:nth-child(2) {
+    width: 10px;
+    background: transparent;
 }
 /* --------------- /news --------------- */
 
@@ -946,7 +957,7 @@ p{
 /* --------------- address --------------- */
 .address h2{
     margin: 0 auto;
-    width: 340px;
+    max-width: 939px;
     margin-bottom: 53px;
 }
 .map__wrap {
@@ -1171,6 +1182,7 @@ p{
 .services-page__quotes {
     position: relative;
     display: block;
+    width: 300px;
     margin-left: 38px;
     line-height: 24px;
     font-size: 17px;
@@ -1179,7 +1191,7 @@ p{
 .services-page__quotes:before{
     content: "";
     position: absolute;
-    top: -10px;
+    top: 0;
     left: -25px;
     width: 15px;
     height: 85px;
@@ -1200,15 +1212,16 @@ p{
 }
 .services-page dl dt{
     font-size: 18px;
-    float: left;
+    /* float: left; */
     font-weight: 700;
     margin-right: 4px;
+    margin-bottom: 7px;
 }
 .services-page dl{
     margin-bottom: 22px;
 }
 .services-page dl dl{
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 5px;
 }
 .services-page span{
@@ -1454,6 +1467,8 @@ p{
         font-size: 30px;
     }
     /* --------------- /header-info ------------- */
+    .news__colon>ul li{
+        display: table-cell;}
 }
 
 @media (min-width: 768px) {
@@ -1632,6 +1647,15 @@ p{
     .site__content .services {
         margin-bottom: -6px;
     }
+    .services-page dl dt{
+        float: left;
+        font-weight: 700;
+        margin-right: 4px;
+        margin-bottom: 0;
+    }
+    .services-page dl dl {
+        font-size: 18px;
+    }
     /* --------------- /services --------------- */
 
     /* --------------- advantages --------------- */
@@ -1642,9 +1666,7 @@ p{
         height: 220px;
     }
     /* --------------- /advantages --------------- */
-    .address h2 {
-        width: 768px;
-    }
+
     /* --------------- social-contact --------------- */
     .social-contact div{
         width: 768px;
@@ -1700,15 +1722,16 @@ p{
         margin: 32px auto 0;
     }
     /* --------------- /breadcrumbs --------------- */
-    
+
     /* --------------- news --------------- */
-    .news>div{
+    .news__colon>ul li{
         width: 460px;
-    }
+}
     /* --------------- /news --------------- */
 
     /* --------------- services-page --------------- */
     .services-page__quotes{
+        width: 100%;
         margin-left: 23px;
         padding-top: 10px;
         line-height: 29px;
@@ -1913,9 +1936,7 @@ p{
     /* --------------- /advantages --------------- */
 
     /* --------------- address --------------- */
-    .address .site__title {
-        width: 940px;
-    }
+
     /* --------------- /address --------------- */
 
     /* --------------- social-contact --------------- */
@@ -2009,12 +2030,14 @@ p{
     .news{
         margin-bottom: 20px;
     }
-    .news>div {
+    .news__colon>ul li{
         margin-left: 16px;
-        min-height: 500px;
     }
-    .news>div:nth-child(2){
+    .news__colon>ul li:nth-child(3){
         margin-left: 0;
+    }
+    .news__colon>ul li:nth-child(2){
+       width: 20px;
     }
     /* --------------- /news --------------- */
 }

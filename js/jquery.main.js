@@ -320,7 +320,6 @@ Popup.prototype = {
     },
     core: function (){
         var self = this;
-
         return {
             build: function (){
                 self.core.controls();
@@ -376,16 +375,16 @@ Popup.prototype = {
                 self.popup.css ({
                     'overflow-y': "hidden"
                 });
-                self.scrollConteiner.css( {
-                    paddingRight: 0
-                } );
+                self.scrollConteiner.css({
+                    paddingRight: 0,
+                    'overflow-y': "scroll"
+                });
                 self.popup.removeClass('popup_opened');
                 self.popup.addClass('popup_hide');
                 location.hash = '';
                 setTimeout( function(){
                     self.popup.removeClass('popup_hide');
                 }, 300 );
-
             },
             getScrollWidth: function (){
                 var scrollDiv = document.createElement("div");
@@ -396,10 +395,17 @@ Popup.prototype = {
                 return scrollbarWidth;
             },
             show: function( className ){
+                if (self.contents.height()+120 > self.window.height()){
+                    self.popup.css ({
+                        'overflow-y': "scroll"
+                    });
+                    self.scrollConteiner.css( {
+                        'overflow-y': "hidden",
+                        paddingRight: 17
+                    });
+                }
                 self.core.setPopupContent( className );
-                self.scrollConteiner.css( {
-                    paddingRight: self.core.getScrollWidth()
-                } );
+                //console.log(self.core.getScrollWidth());
                 self.popup.addClass('popup_opened');
                 self.core.centerWrap();
                 $('.popup_opened').find('textarea').focus();

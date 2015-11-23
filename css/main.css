@@ -1222,7 +1222,7 @@ p{
 .services-page dl{
     margin-bottom: 22px;
 }
-.services-page dl dl{
+.services-page dl dd{
     font-size: 16px;
     margin-bottom: 5px;
 }
@@ -1753,7 +1753,7 @@ p{
         margin-right: 4px;
         margin-bottom: 0;
     }
-    .services-page dl dl {
+    .services-page dl dd{
         font-size: 18px;
     }
     /* --------------- /services --------------- */

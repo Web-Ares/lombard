@@ -574,7 +574,7 @@ p{
 /* --------------- services --------------- */
 .site__content .services {
     max-width: 945px;;
-    padding: 0;
+    padding: 0 10px;
 }
 .services .site__title{
     padding-top: 6px;
@@ -586,7 +586,6 @@ p{
 .services li{
     width: 221px;
     display: inline-block;
-    margin-left: 15px;
     margin-bottom: 30px;
     vertical-align: top;
 }
@@ -616,25 +615,20 @@ p{
 /* --------------- advantages --------------- */
 .site__content .advantages {
     max-width: 1180px;
-    padding: 0;
+    padding: 0 10px;
 }
 .advantages ul{
     display: block;
     text-align: center;
 }
-.advantages ul li:first-child{
-    margin-left: 0;
-}
 .advantages li{
-    width: 140px;
-    display: inline-block;
-    margin-left: 15px;
-    margin-bottom: 50px;
+    width: 221px;
+    margin: 0 auto 40px auto;
     vertical-align: top;
 }
 .advantages ul li div{
     position: relative;
-    height: 120px;
+    height: 220px;
     text-align: center;
     margin-bottom: 10px;
     overflow: hidden;
@@ -1739,6 +1733,7 @@ p{
         top: -10px;
     }
     .services li{
+        margin-left: 15px;
         margin-bottom: 60px;
     }
     .services ul li:first-child{
@@ -1746,6 +1741,7 @@ p{
     }
     .site__content .services {
         margin-bottom: -6px;
+        padding: 0;
     }
     .services-page dl dt{
         float: left;
@@ -1759,8 +1755,14 @@ p{
     /* --------------- /services --------------- */
 
     /* --------------- advantages --------------- */
-    .advantages li{
+    .advantages ul li{
         width: 221px;
+        margin-left: 15px;
+        margin-bottom: 50px;
+        display: inline-block;
+    }
+    .advantages ul li:first-child {
+        margin-left: 0;
     }
     .advantages ul li div {
         height: 220px;
@@ -2029,6 +2031,7 @@ p{
     /* --------------- /advantages --------------- */
     .site__content .advantages {
         max-width: 1196px;
+        padding: 0;
     }
     .advantages li{
         width: 221px;

@@ -34,7 +34,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: left;
-    padding: 4px 10px 0;
+    padding: 6px 10px 0;
     font: 14px 'Ubuntu', sans-serif;
 }
 .ares-select_mobile select {

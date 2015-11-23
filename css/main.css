@@ -213,12 +213,12 @@ p{
 }
 .header-info__phone{
     position: absolute;
-    top: 68px;
+    top: 39px;
     right: 0;
     display: inline-block;
     vertical-align: middle;
     margin-bottom: 24px;
-    font-size: 18px;
+    font-size: 14px;
     color: #000;
     cursor: default;
 }
@@ -266,8 +266,9 @@ p{
     background-image: url("../img/icons-header.png");
 }
 .header-info__callback{
-    position: relative;
-    display: none;
+    position: absolute;
+    top: 69px;
+    right: 0;
     padding-bottom: 4px;
     border-bottom: 1px dotted #000;
     font-size: 14px;
@@ -975,7 +976,7 @@ p{
 /* --------------- logo --------------- */
 .logo {
     display: block;
-    width: 200px;
+    width: 175px;
     margin: 14px 0 0 15px;
 }
 .logo img{
@@ -1276,8 +1277,6 @@ p{
 }
 .popup__wrap {
     position: relative;
-    width: 460px;
-    margin: 0 auto;
     z-index: 2;
 }
 .popup__content {
@@ -1287,7 +1286,8 @@ p{
 }
 .popup__content > div{
     position: relative;
-    width: 460px;
+    max-width: 460px;
+    margin: 0 auto;
     padding: 22px 27px 22px 27px;
     text-align: left;
     transition: opacity .3s ease;
@@ -1378,9 +1378,9 @@ p{
 
 }
 .callback__captcha > div{
-    float: left;
+    display: inline-block;
     margin-right: 11px;
-    margin-bottom: 13px;
+    margin-bottom: 7px;
     border: 1px solid #000;
 }
 .callback__captcha img{
@@ -1389,6 +1389,7 @@ p{
 .callback__captcha > span{
     display: block;
     line-height: 18px;
+    margin-bottom: 7px;
 }
 .callback__captcha span:after{
     content: '';
@@ -1412,6 +1413,7 @@ p{
     display: inline-block;
     padding: 6px 12px;
     color: #fff;
+    line-height: 20px;
     text-transform: uppercase;
     background-color: #9d9e9e;
 }
@@ -1539,6 +1541,13 @@ p{
 }
 /* -------------- /question --------------- */
 
+@media (min-width: 380px) {
+    .callback__captcha > div{
+        float: left;
+        margin-bottom: 13px;
+    }
+}
+
 @media (min-width: 580px) {
     /* --------------- header-info ------------- */
     .header-info {
@@ -1546,7 +1555,9 @@ p{
         width: 291px;
     }
     .header-info__callback{
-        display: inline-block;
+        position: relative;
+        top: 0;
+        right: 0;
     }
     .header-info__city{
         margin-top: 0;
@@ -1558,6 +1569,7 @@ p{
         position: relative;
         top: 0;
         right: 0;
+        font-size: 18px;
     }
     .header-info__phone span {
         font-size: 30px;
@@ -2137,6 +2149,7 @@ p{
     }
     /* --------------- /news --------------- */
 }
+
 @media (min-width: 1920px) {
     /* --------------- services --------------- */
     .site__content .services {

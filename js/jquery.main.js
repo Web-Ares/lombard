@@ -40,10 +40,10 @@ $(function(){
             timeout: 20000,
             type: "GET",
             data: {
-                type : 'callback',
+                service : 'callback-popup__service',
                 name: $('#callback-popup__name').val(),
                 phone: $('#callback-popup__phone').val(),
-                time: $('#callback-popup__time').val()
+                message: $('#callback-popup__message').val()
             },
             success: function (msg) {
                 popup.core.show('thanks');

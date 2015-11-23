@@ -496,14 +496,16 @@
                             <label for="callback-popup__phone">контактный телефон <span>*</span></label>
                             <input type="tel" name="callback-popup__phone" id="callback-popup__phone"/>
                             <label for="callback-popup__message">дополнительная информация</label>
-                            <input type="text" name="callback-popup__message" id="callback-popup__message"/>
-                            <div class="captcha">
-                                <div></div>
+                            <textarea name="callback-popup__message" id="callback-popup__message"></textarea>
+                            <div class="callback__captcha">
+                                <div>
+                                    <img src="pic/captcha.jpg" alt="captcha"/>
+                                </div>
                                 <span>Защита от автоматического заполнения</span>
                                 <label for="callback-popup__captcha">введите символы с картинки <span>*</span></label>
                                 <input type="text" name="callback-popup__captcha" id="callback-popup__captcha"/>
                             </div>
-                            <div class="note"><span>*</span> - обязательные поля</div>
+                            <div class="callback-popup__note"><span>*</span> - обязательные поля</div>
                             <input type="submit" class="btn" name="callback-popup__send" id="callback-popup__send" value="Отправить"/>
                             <!-- popup__close -->
                             <button class="popup__close">ЗАКРЫТЬ</button>
@@ -538,7 +540,6 @@
     <script src="js/swiper.min.js"></script>
     <script src="js/jquery.select.js"></script>
     <script src="js/jquery.nicescroll.min.js"></script>
-    <script src="js/jquery.separate.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"> </script>
     <script src="js/jquery.main.js"></script>

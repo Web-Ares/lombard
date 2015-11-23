@@ -1250,7 +1250,7 @@ p{
 .popup__content > div{
     position: relative;
     width: 460px;
-    padding: 28px 34px 28px 37px;
+    padding: 22px 27px 22px 27px;
     text-align: left;
     transition: opacity .3s ease;
     -webkit-transition: opacity .3s ease;
@@ -1261,22 +1261,26 @@ p{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e3e3e3',GradientType=1 );
 }
 .popup__content h2{
-    margin-bottom: 35px;
+    margin-bottom: 28px;
     font-size: 30px;
     font-weight: 400;
 }
 .popup__content label{
     display: block;
+    margin-bottom: 4px;
     color: #979797;
     text-transform: uppercase;
+}
+.popup__content label span{
+    color: #d22323;
 }
 .popup__content input,
 .popup__content select,
 .popup__content textarea{
     display: block;
     width: 100%;
-    height: 49px;
-    margin-bottom: 20px;
+    height: 31px;
+    margin-bottom: 17px;
     padding: 0 15px;
     border: 1px solid #bebebe;
     border-radius: 5px;
@@ -1285,13 +1289,13 @@ p{
     box-shadow: none;
 }
 .popup__content textarea{
-    height: 180px;
+    height: 93px;
     padding: 10px 15px;
 }
 .popup__content .btn{
     width: 100%;
     height: 38px;
-    margin: 0 auto;
+    margin: 0 auto 23px;
     color: #fff;
     border: none;
     border-radius: 0;
@@ -1302,17 +1306,58 @@ p{
     -webkit-transition: background-color .3s ease, color .3s ease;
 }
 .popup__content .btn:hover{
-
+    background-color: #9f0202;
+}
+.popup__content .note span{
+    color: #d22323;
 }
 .popup__close{
+    width: 100%;
+    padding-right: 22px;
     border: none;
+    background: url("../img/icons-close-modal.png") no-repeat 100% 50%;
     transition: transform .3s ease;
     -webkit-transition: transform .3s ease;
+    text-align: right;
 }
 .popup__close:hover{
-
+    text-decoration: underline;
 }
 /* ----------------- /popup ------------------- */
+
+/* ------------ callback-popup ---------------- */
+.callback-popup__note{
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+.callback-popup__note span{
+    color: #d22323;
+}
+/* ------------ /callback-popup --------------- */
+
+/* ---------- callback__captcha --------------- */
+.callback__captcha{
+
+}
+.callback__captcha > div{
+    float: left;
+    margin-right: 11px;
+    margin-bottom: 13px;
+    border: 1px solid #000;
+}
+.callback__captcha img{
+    display: block;
+}
+.callback__captcha > span{
+    display: block;
+    line-height: 18px;
+}
+.callback__captcha span:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+/* ---------- /callback__captcha -------------- */
 
 /* -------------- thanks-popup ---------------- */
 .thanks-popup{

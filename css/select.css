@@ -2,35 +2,40 @@
     position: relative;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
-    width: 200px;
-    height: 22px;
-    border: 1px solid #000;
+    width: 100%;
+    height: 31px;
+    margin-bottom: 17px;
+    border: 1px solid #bebebe;
+    border-radius: 5px;
     display: inline-block;
+    background-color: #fff;
     vertical-align: top;
     overflow: hidden;
+    cursor: pointer;
 }
 .ares-select:after{
     content: '';
     position: absolute;
     right: 0;
-    width: 20px;
-    border-left: 1px solid #000;
+    width: 30px;
     top: 0;
     bottom: 0;
+    background: url("../img/icons-arrows.jpg") no-repeat center;
 }
 .ares-select__item {
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
-    right: 20px;
+    right: 30px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: left;
-    padding: 1px 5px 0;
+    padding: 4px 10px 0;
+    font: 14px 'Ubuntu', sans-serif;
 }
 .ares-select_mobile select {
     position: absolute;
@@ -47,7 +52,8 @@
     position: absolute;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
-    border: 1px solid #000;
+    border: 1px solid #bebebe;
+    background-color: #fff;
     overflow: hidden;
     z-index: 10;
 }
@@ -55,13 +61,19 @@
     z-index: 1;
 }
 .ares-select__popup li{
+    height: 31px;
+    padding: 7px 10px 0;
+    font-size: 14px;
     white-space: nowrap;
     overflow: hidden;
     cursor: pointer;
+    transition: background-color .3s ease, color .3s ease;
+    -webkit-transition: background-color .3s ease, color .3s ease;
 }
+.ares-select__popup li:hover,
 .ares-select__popup li.active {
     color: #fff;
-    background: #f00;
+    background-color: #cb0101;
 }
 .ares-select__popup .iScrollVerticalScrollbar {
     position: absolute;

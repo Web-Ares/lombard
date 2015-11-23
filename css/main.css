@@ -573,34 +573,35 @@ p{
 
 /* --------------- services --------------- */
 .site__content .services {
-    max-width: 945px;;
+    max-width: 952px;
     padding: 0 10px;
 }
 .services .site__title{
     padding-top: 6px;
 }
-.services ul{
+.services__wrap{
     display: block;
     text-align: center;
 }
-.services li{
+.services__item{
     width: 221px;
     display: inline-block;
-    margin-bottom: 30px;
+    margin: 0 7px 30px 7px;
     vertical-align: top;
 }
-.services ul li div{
+.services__pic{
     height: 221px;
     background: #ededed;
     text-align: center;
-    padding-top: 61px;
     margin-bottom: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-.services h3{
+.services__item h3{
     margin-bottom: 25px;
     text-align: left;
 }
-.services img{
+.services__pic img{
     display: inline-block;
     vertical-align: top;
 }
@@ -617,33 +618,35 @@ p{
     max-width: 1180px;
     padding: 0 10px;
 }
-.advantages ul{
+.advantages__wrap{
     display: block;
     text-align: center;
 }
-.advantages li{
+.advantages__item{
     width: 221px;
     margin: 0 auto 40px auto;
     vertical-align: top;
 }
-.advantages ul li div{
+.advantages__pic{
     position: relative;
     height: 220px;
     text-align: center;
     margin-bottom: 10px;
     overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .advantages h3{
     margin-bottom: 10px;
     text-align: left;
 }
-.advantages img{
+.advantages__pic img{
     width: 100%;
     height: 100%;
     display: inline-block;
     vertical-align: top;
 }
-.advantages ul li div span{
+.advantages__pic span{
     position: absolute;
     display: block;
     padding-top: 31px;
@@ -943,6 +946,7 @@ p{
     margin: 0 auto;
     width: 320px;
     height: 100px;
+
 }
 .social-contact div img{
     width: 100%;
@@ -1732,11 +1736,7 @@ p{
     .services-page__quotes:before {
         top: -10px;
     }
-    .services li{
-        margin-left: 15px;
-        margin-bottom: 60px;
-    }
-    .services ul li:first-child{
+    .services__wrap. services__item:first-child{
         margin-left: 0;
     }
     .site__content .services {
@@ -1755,16 +1755,13 @@ p{
     /* --------------- /services --------------- */
 
     /* --------------- advantages --------------- */
-    .advantages ul li{
+    .advantages__item{
         width: 221px;
         margin-left: 15px;
         margin-bottom: 50px;
         display: inline-block;
     }
-    .advantages ul li:first-child {
-        margin-left: 0;
-    }
-    .advantages ul li div {
+    .advantages__pic {
         height: 220px;
     }
     /* --------------- /advantages --------------- */
@@ -2023,7 +2020,7 @@ p{
     .services {
         max-width: 1534px;
     }
-    .services li {
+    .services__item {
         margin-bottom: 59px;
     }
     /* --------------- /services --------------- */
@@ -2033,7 +2030,7 @@ p{
         max-width: 1196px;
         padding: 0;
     }
-    .advantages li{
+    .advantages__item{
         width: 221px;
     }
     /* --------------- /advantages --------------- */

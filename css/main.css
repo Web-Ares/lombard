@@ -720,6 +720,7 @@ p{
 .cost .cost__steps>div{
     margin-bottom: 30px;
     margin-left: 7px;
+    font-size: 14px;
 }
 .cost__calculator__form p{
     text-transform: uppercase;

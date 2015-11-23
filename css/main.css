@@ -2140,6 +2140,16 @@ p{
        width: 20px;
     }
     /* --------------- /news --------------- */
+
+    /* --------------- documents --------------- */
+    .documents table tr td{
+        margin-bottom: 0;
+        margin-left: 111px;
+    }
+    .documents-block{
+        padding-top: 29px;
+    }
+    /* --------------- /documents --------------- */
 }
 
 @media (min-width: 1920px) {
@@ -2156,4 +2166,5 @@ p{
         margin-left: 0;
     }
     /* --------------- /services --------------- */
+
 }

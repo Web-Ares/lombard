@@ -827,6 +827,7 @@ p{
     height: 73px;
     padding-top: 20px;
     padding-left: 70px;
+    margin-bottom: 16px;
 }
 .documents table tr td{
     display: inline-block;
@@ -2144,12 +2145,12 @@ p{
     /* --------------- /news --------------- */
 
     /* --------------- documents --------------- */
-    .documents table tr td{
-        margin-bottom: 0;
-        margin-left: 111px;
-    }
     .documents-block{
         padding-top: 29px;
+        display: inline-block;
+    }
+    .documents-block:nth-child(odd){
+        margin-right: 111px;
     }
     /* --------------- /documents --------------- */
 }

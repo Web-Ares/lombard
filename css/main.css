@@ -1418,6 +1418,7 @@ p{
     padding: 18px 20px 34px;
     background: #e7e7e7;
     overflow: hidden;
+    position: relative;
 }
 .popup__geolocation .popup__close {
     position: absolute;

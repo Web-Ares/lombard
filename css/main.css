@@ -1712,7 +1712,7 @@ p{
         max-width: 940px;
         margin: 0 auto;
         position: relative;
-        padding: 44px 20px;
+        padding: 44px 0;
     }
     .slider__info li:before {
         width: 10px;
@@ -1998,7 +1998,7 @@ p{
     .slider .swiper-container-horizontal > .swiper-pagination {
         width: 343px;
         left: 50%;
-        margin-left: 106px;
+        margin-left: 127px;
         bottom: 29px;
     }
     /* --------------- /slider --------------- */

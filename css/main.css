@@ -1419,7 +1419,7 @@ p{
     background: #e7e7e7;
     overflow: hidden;
 }
-.geolocation .popup__close {
+.popup__geolocation .popup__close {
     position: absolute;
     bottom: 24px;
     right: 24px;
@@ -1434,18 +1434,18 @@ p{
     display: block;
     margin-bottom: 30px;
 }
-.geolocation dl {
+.popup__geolocation dl {
     padding: 0 2px;
     font-size: 14px;
     color: #000;
 }
-.geolocation dt {
+.popup__geolocation dt {
     color: #979797;
     font-size: 14px;
     text-transform: uppercase;
     margin-bottom: 23px;
 }
-.geolocation dd {
+.popup__geolocation dd {
 
 }
 .geolocation__nice-input {

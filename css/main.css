@@ -1247,6 +1247,7 @@ p{
     top: 0;
     left: 0;
     display: block;
+    text-align: center;
     width: 0;
     height: 0;
     padding-top: 10px;
@@ -1270,6 +1271,9 @@ p{
 .popup__wrap {
     position: relative;
     z-index: 2;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
 }
 .popup__content {
     display: none;

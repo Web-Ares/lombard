@@ -928,6 +928,11 @@ p{
     padding: 0 20px;
     margin: 0 auto;
 }
+.new-detail h1 {
+    font-size: 30px;
+    color: #000;
+    font-weight: 400;
+}
 .new-detail__pic {
     margin-bottom: 19px;
 }

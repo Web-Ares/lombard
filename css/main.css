@@ -269,6 +269,7 @@ p{
     position: absolute;
     top: 69px;
     right: 0;
+    display: inline-block;
     padding-bottom: 4px;
     border-bottom: 1px dotted #000;
     font-size: 14px;
@@ -333,6 +334,7 @@ p{
     width: 108px;
     height: 25px;
     margin-left: -54px;
+    padding-top: 3px;
     font-size: 14px;
     background-color: #cb0101;
     color: #fff;
@@ -1638,7 +1640,7 @@ p{
 
     /* ----------------- sites ----------------- */
     .sites{
-        top: -210px;
+        top: -207px;
         height: 212px;
     }
     .sites > div{

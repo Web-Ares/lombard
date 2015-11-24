@@ -814,11 +814,12 @@ p{
     position: relative;
     display: block;
 }
-.documents-block{
+.documents__title{
     height: 73px;
     padding-top: 20px;
     padding-left: 70px;
     margin-bottom: 16px;
+    background-repeat: no-repeat;
 }
 .documents table tr td{
     display: inline-block;
@@ -2135,11 +2136,11 @@ p{
     /* --------------- /news --------------- */
 
     /* --------------- documents --------------- */
-    .documents-block{
+    .documents__title{
         padding-top: 29px;
         display: inline-block;
     }
-    .documents-block:nth-child(odd){
+    .documents__title:nth-child(odd){
         margin-right: 111px;
     }
     /* --------------- /documents --------------- */

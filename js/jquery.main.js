@@ -255,6 +255,7 @@ var subMenu = function (obj) {
     var _obj = obj,
         _site = $('.site'),
         _sub = _obj.children('ul'),
+        _btn = _obj.children('a'),
         _window = $(window),
         _windowWidth = $(window).width();
 
@@ -272,8 +273,7 @@ var subMenu = function (obj) {
                     }
                 }
             });
-
-            _obj.on({
+            _btn.on({
                 click: function () {
                     if (_obj.hasClass('mobile-active')){
                         _sub.slideUp(500);
@@ -281,7 +281,7 @@ var subMenu = function (obj) {
                     } else {
                         $('.menu li').removeClass('mobile-active');
                         $('.menu li ul').slideUp(500);
-                        $(this).addClass('mobile-active');
+                        $(this).parent('li').addClass('mobile-active');
                         _sub.slideDown(500);
                     }
                     return false

@@ -57,7 +57,7 @@ p{
 .site__content section{
     max-width: 980px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 .site__header {
     position: relative;
@@ -269,6 +269,7 @@ p{
     position: absolute;
     top: 69px;
     right: 0;
+    display: inline-block;
     padding-bottom: 4px;
     border-bottom: 1px dotted #000;
     font-size: 14px;
@@ -333,6 +334,7 @@ p{
     width: 108px;
     height: 25px;
     margin-left: -54px;
+    padding-top: 3px;
     font-size: 14px;
     background-color: #cb0101;
     color: #fff;
@@ -573,8 +575,8 @@ p{
 
 /* --------------- services --------------- */
 .site__content .services {
-    max-width: 952px;
-    padding: 0 10px;
+    max-width: 980px;
+    padding: 0 20px;
 }
 .services .site__title{
     padding-top: 6px;
@@ -612,7 +614,7 @@ p{
 /* --------------- advantages --------------- */
 .site__content .advantages {
     max-width: 1180px;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 .advantages__wrap{
     display: block;
@@ -775,7 +777,7 @@ p{
     position: relative;
     font-size: 14px;
     color: #000;
-    padding: 0 10px;
+    padding: 0 20px;
     max-width: 980px;
     margin: 49px auto 0;
     padding-bottom: 10px;
@@ -949,9 +951,9 @@ p{
 /* --------------- /social-contact --------------- */
 
 /* --------------- address --------------- */
-.address h2{
+.address h2 {
     margin: 0 auto;
-    max-width: 939px;
+    max-width: 940px;
     margin-bottom: 53px;
 }
 .map__wrap {
@@ -984,6 +986,13 @@ p{
     max-width: 980px;
     padding: 0 20px;
     margin: 0 auto;
+}
+.new-detail h1 {
+    font-size: 30px;
+    line-height: 36px;
+    color: #000;
+    font-weight: 400;
+    margin-bottom: 14px;
 }
 .new-detail__pic {
     margin-bottom: 19px;
@@ -1142,7 +1151,7 @@ p{
 /* --------------- /pagination --------------- */
 
 /* --------------- services-page --------------- */
-.services-page>h4{
+.services-page>h1{
     font-size: 30px;
     margin-top: 26px;
     margin-bottom: 22px;
@@ -1248,6 +1257,7 @@ p{
     top: 0;
     left: 0;
     display: block;
+    text-align: center;
     width: 0;
     height: 0;
     padding-top: 10px;
@@ -1271,6 +1281,9 @@ p{
 .popup__wrap {
     position: relative;
     z-index: 2;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
 }
 .popup__content {
     display: none;
@@ -1413,14 +1426,15 @@ p{
 /* -------------- /thanks-popup --------------- */
 
 /* --------------- geolocation --------------- */
-.popup__content > div.geolocation {
+.popup__geolocation {
     max-width: 409px;
     margin: 0 auto;
     padding: 18px 20px 34px;
     background: #e7e7e7;
     overflow: hidden;
+    position: relative;
 }
-.geolocation .popup__close {
+.popup__geolocation .popup__close {
     position: absolute;
     bottom: 24px;
     right: 24px;
@@ -1435,18 +1449,18 @@ p{
     display: block;
     margin-bottom: 30px;
 }
-.geolocation dl {
+.popup__geolocation dl {
     padding: 0 2px;
     font-size: 14px;
     color: #000;
 }
-.geolocation dt {
+.popup__geolocation dt {
     color: #979797;
     font-size: 14px;
     text-transform: uppercase;
     margin-bottom: 23px;
 }
-.geolocation dd {
+.popup__geolocation dd {
 
 }
 .geolocation__nice-input {
@@ -1627,7 +1641,7 @@ p{
 
     /* ----------------- sites ----------------- */
     .sites{
-        top: -210px;
+        top: -207px;
         height: 212px;
     }
     .sites > div{
@@ -1701,7 +1715,7 @@ p{
         max-width: 940px;
         margin: 0 auto;
         position: relative;
-        padding: 44px 20px;
+        padding: 44px 0;
     }
     .slider__info li:before {
         width: 10px;
@@ -1987,7 +2001,7 @@ p{
     .slider .swiper-container-horizontal > .swiper-pagination {
         width: 343px;
         left: 50%;
-        margin-left: 106px;
+        margin-left: 127px;
         bottom: 29px;
     }
     /* --------------- /slider --------------- */

@@ -1412,7 +1412,7 @@ p{
 /* -------------- /thanks-popup --------------- */
 
 /* --------------- geolocation --------------- */
-.popup__content > div.geolocation {
+.popup__geolocation {
     max-width: 409px;
     margin: 0 auto;
     padding: 18px 20px 34px;

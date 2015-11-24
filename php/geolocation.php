@@ -5,8 +5,7 @@ $lng = $_GET['lng'];
 $json_data = '{
                 "html": "
                     <div class=\'popup__content popup__geolocation\'>
-                        <div class=\'geolocation\'\'>
-                            <span class=\'popup__close\'>ЗАКРЫТЬ</span>
+                        <span class=\'popup__close\'>ЗАКРЫТЬ</span>
                             <span class=\'geolocation__title\'>Выбор города</span>
                             <dl>
                                 <dt>выберите свой город</dt>
@@ -45,7 +44,6 @@ $json_data = '{
                                     </fieldset>
                                 </dd>
                             </dl>
-                        </div>
                     </div>
                    "
 }';

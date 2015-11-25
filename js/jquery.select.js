@@ -209,8 +209,13 @@ var AresSelect = function( params ){
 
                             }
                         } );
-                        $( 'body' ).on( {
+                        $( 'body, .popup, .callback-popup' ).on( {
                             'click': function(){
+                                if( self.opened ){
+                                    self.core.hidePopup();
+                                }
+                            },
+                            'scroll': function(){
                                 if( self.opened ){
                                     self.core.hidePopup();
                                 }

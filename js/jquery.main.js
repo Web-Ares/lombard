@@ -99,6 +99,7 @@ $(function(){
 var Sites = function (obj) {
     //private properties
     var _self = this,
+        _wrap = obj.find($('.site__header-layout')),
         _tail = obj.find($('.sites__tail')),
         _close = obj.find($('.sites__close')),
         _obj = obj;
@@ -109,17 +110,17 @@ var Sites = function (obj) {
                 click: function () {
                     if (!_obj.hasClass('active')){
                         _obj.addClass('active');
-                        //_tail.addClass('steel');
+                        _wrap.slideDown(300);
                     } else {
                         _obj.removeClass('active');
-                        _tail.removeClass('steel');
+                        _wrap.slideUp(300);
                     }
                 }
             })
             _close.on({
                 click: function () {
                     _obj.removeClass('active');
-                    _tail.removeClass('steel');
+                    _wrap.slideUp(300);
                 }
             })
         },

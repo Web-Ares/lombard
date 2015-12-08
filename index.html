@@ -85,7 +85,7 @@
                     <li><a href="#">Вакансии</a></li>
                     <li><a href="#">Адрес</a></li>
                     <li><a href="#">Контакты</a></li>
-                    <li class="btn_debt"><a href="#">% Узнай задолженность</a></li>
+                    <li class="btn_debt popup__open" data-popup="debit""><a href="#">% Узнай задолженность</a></li>
                 </ul>
             </nav>
             <!-- /header-menu -->
@@ -492,6 +492,36 @@
     <div class="popup">
         <!-- popup__wrap -->
         <div class="popup__wrap">
+
+            <!-- popup__content -->
+            <div class="popup__content popup__debit">
+                <!-- callback-popup -->
+                <div class="callback-popup">
+                    <!-- callback-popup__content -->
+                    <div class="callback-popup__content">
+                        <h2>Онлайн-заявка</h2>
+                        <form class="callback__form" action="#">
+                            <label for="debit1">Услуга</label>
+                            <select name="debit1" id="debit1">
+                                <option value="Автоломбард деньги под залог автомобиля">Автоломбард деньги под залог автомобиля</option>
+                                <option value="Домоломбард деньги под залог дома">Домоломбард деньги под залог дома</option>
+                            </select>
+                            <label for="debit2">фио</label>
+                            <input type="text" name="debit2" id="debit2"/>
+                            <label for="debit3">контактный телефон <span>*</span></label>
+                            <input type="tel" name="debit3" id="debit3"/>
+                            <input type="submit" class="btn" name="debit4" id="debit4" value="Отправить"/>
+                            <!-- popup__close -->
+                            <button class="popup__close">ЗАКРЫТЬ</button>
+                            <!-- /popup__close -->
+                        </form>
+                    </div>
+                    <!-- /callback-popup_content -->
+                </div>
+                <!-- /callback-popup -->
+            </div>
+            <!-- popup__content -->
+
             <!-- popup__content -->
             <div class="popup__content popup__callback">
                 <!-- callback-popup -->
@@ -531,6 +561,7 @@
                 <!-- /callback-popup -->
             </div>
             <!-- popup__content -->
+
             <!-- popup__content -->
             <div class="popup__content popup__thanks">
                 <!-- thanks-popup -->

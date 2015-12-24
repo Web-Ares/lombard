@@ -13,6 +13,26 @@ $(function(){
             $(".calc_enter").attr("placeholder", "0");
     });
 
+    /*------------*/
+    start = $(".site__header").offset().top + $(".site__header").outerHeight();
+    navigation();
+
+    $(window).scroll(function() {
+        navigation();
+    })
+
+    function navigation(){
+        scrolling = $(window).scrollTop();
+        console.log(start)
+        if (scrolling > start) {
+            $('.site__header').addClass('header-fix')
+        }
+        else{
+            $('.site__header').removeClass('header-fix')
+        }
+    }
+    /*------------*/
+
     $('.sites').each(function () {
         Sites($(this));
     });

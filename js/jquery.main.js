@@ -166,6 +166,8 @@ var Slider = function (obj) {
                 zoom: 12
             });
 
+            myMap.behaviors.disable('drag');
+
             $.each($('.map__item'), function(i){
                 var curElem = $(this);
 
